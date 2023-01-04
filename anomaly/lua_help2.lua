@@ -2226,41 +2226,19 @@ CServerList = {}
 
 ---@param string string
 function CServerList:SetPlayerName(string) end
----@param string string
-function CServerList:SetWindowName(string) end
 
 ---@param SServerFilters SServerFilters
 function CServerList:SetFilters(SServerFilters) end
 ---@param boolean boolean
 function CServerList:RefreshList(boolean) end
 ---@param boolean boolean
-function CServerList:SetAutoDelete(boolean) end
 function CServerList:SetSortFunc(string, boolean) end
 ---@param boolean boolean
 function CServerList:NetRadioChanged(boolean) end
----@param CUIWindow CUIWindow
-function CServerList:AttachChild(CUIWindow) end
 function CServerList:ShowServerInfo() end
 
 function CServerList:RefreshQuick() end
 function CServerList:ConnectToSelected() end
----@param CUIWindow CUIWindow
-function CServerList:DetachChild(CUIWindow) end
-function CServerList:SetPPMode() end
-function CServerList:WindowName() end
-function CServerList:IsShown() end
-
----@param boolean boolean
-function CServerList:Show(boolean) end
-function CServerList:GetHeight()  end
-function CServerList:GetWidth()  end
----@param vector2 vector2
-function CServerList:SetWndSize(vector2) end
-function CServerList:IsEnabled() end
-function CServerList:ResetPPMode() end
----@param boolean boolean
-function CServerList:Enable(boolean) end
-function CServerList:IsAutoDelete() end
 	
 
 
@@ -2569,80 +2547,34 @@ function CTushkano:use(CGameObject) end
 ---@overload fun(): CUI3tButton
 CUI3tButton = {}
 
----@param string string
-function CUI3tButton:SetWindowName(string) end
 
 function CUI3tButton:TextControl() end
----@param boolean boolean
-function CUI3tButton:SetAutoDelete(boolean) end
----@param boolean boolean
-function CUI3tButton:Enable(boolean) end
----@param CUIWindow CUIWindow
-function CUI3tButton:AttachChild(CUIWindow) end
 function CUI3tButton:GetTextureRect() end
 
----@param vector2 vector2
-function CUI3tButton:SetWndSize(vector2) end
 
----@param CUIWindow CUIWindow
-function CUI3tButton:DetachChild(CUIWindow) end
-function CUI3tButton:SetPPMode() end
-function CUI3tButton:WindowName() end
-function CUI3tButton:IsShown() end
 ---@param Frect Frect
 ---@param Frect Frect
 function CUI3tButton:SetTextureRect(Frect) end
----@param boolean boolean
-function CUI3tButton:Show(boolean) end
-function CUI3tButton:GetHeight()  end
-function CUI3tButton:GetWidth()  end
 ---@param string string
 function CUI3tButton:InitTexture(string) end
-function CUI3tButton:IsEnabled() end
-function CUI3tButton:ResetPPMode() end
 ---@param boolean boolean
 function CUI3tButton:SetStretchTexture(boolean) end
-function CUI3tButton:IsAutoDelete() end
 
 ---@class CUIButton:CUIStatic 
 ---@overload fun(): CUIButton
 CUIButton = {}
 
----@param string string
----@param string string
-function CUIButton:SetWindowName(string) end
 
 function CUIButton:TextControl() end
 ---@param boolean boolean
-function CUIButton:SetAutoDelete(boolean) end
----@param boolean boolean
 function CUIButton:SetStretchTexture(boolean) end
----@param CUIWindow CUIWindow
-function CUIButton:AttachChild(CUIWindow) end
----@param boolean boolean
-function CUIButton:Enable(boolean) end
 ---@param Frect Frect
 ---@param Frect Frect
 function CUIButton:SetTextureRect(Frect) end
-function CUIButton:ResetPPMode() end
----@param boolean boolean
-function CUIButton:Show(boolean) end
----@param CUIWindow CUIWindow
-function CUIButton:DetachChild(CUIWindow) end
-function CUIButton:SetPPMode() end
-function CUIButton:WindowName() end
-function CUIButton:IsShown() end
 
-
-function CUIButton:GetHeight()  end
-function CUIButton:GetWidth()  end
 ---@param string string
 function CUIButton:InitTexture(string) end
-function CUIButton:IsEnabled() end
----@param vector2 vector2
-function CUIButton:SetWndSize(vector2) end
 function CUIButton:GetTextureRect() end
-function CUIButton:IsAutoDelete() end
 	
 
 
@@ -2650,45 +2582,21 @@ function CUIButton:IsAutoDelete() end
 ---@overload fun(): CUICheckButton
 CUICheckButton = {}
 
----@param string string
-function CUICheckButton:SetWindowName(string) end
 
 function CUICheckButton:TextControl() end
----@param boolean boolean
-function CUICheckButton:Enable(boolean) end
----@param boolean boolean
-function CUICheckButton:SetAutoDelete(boolean) end
 function CUICheckButton:GetTextureRect() end
-function CUICheckButton:ResetPPMode() end
 ---@param boolean boolean
 function CUICheckButton:SetCheck(boolean) end
----@param CUIWindow CUIWindow
-function CUICheckButton:AttachChild(CUIWindow) end
 ---@param boolean boolean
 function CUICheckButton:SetStretchTexture(boolean) end
 ---@param Frect Frect
----@param Frect Frect
 function CUICheckButton:SetTextureRect(Frect) end
 function CUICheckButton:GetCheck() end
----@param boolean boolean
-function CUICheckButton:Show(boolean) end
----@param CUIWindow CUIWindow
-function CUICheckButton:DetachChild(CUIWindow) end
-function CUICheckButton:SetPPMode() end
-function CUICheckButton:WindowName() end
-function CUICheckButton:IsShown() end
 
-
-function CUICheckButton:GetHeight()  end
-function CUICheckButton:GetWidth()  end
 ---@param string string
 function CUICheckButton:InitTexture(string) end
-function CUICheckButton:IsEnabled() end
----@param vector2 vector2
-function CUICheckButton:SetWndSize(vector2) end
 ---@param CUIWindow CUIWindow
 function CUICheckButton:SetDependControl(CUIWindow) end
-function CUICheckButton:IsAutoDelete() end
 	
 
 
@@ -2697,154 +2605,63 @@ function CUICheckButton:IsAutoDelete() end
 CUIComboBox = {}
 
 function CUIComboBox:ClearList() end
----@param string string
-function CUIComboBox:SetWindowName(string) end
 
 ---@param string string
 function CUIComboBox:SetText(string) end
 ---@param number number
 function CUIComboBox:enable_id(number) end
----@param vector2 vector2
-function CUIComboBox:SetWndSize(vector2) end
 function CUIComboBox:AddItem(string, number) end
 function CUIComboBox:GetText() end
 ---@param number number
 function CUIComboBox:GetTextOf(number) end
----@param boolean boolean
-function CUIComboBox:SetAutoDelete(boolean) end
 ---@param number number
 function CUIComboBox:SetListLength(number) end
 function CUIComboBox:CurrentID() end
 ---@param number number
 function CUIComboBox:GetTextOf(number) end
----@param CUIWindow CUIWindow
-function CUIComboBox:AttachChild(CUIWindow) end
----@param boolean boolean
-function CUIComboBox:Enable(boolean) end
-
 function CUIComboBox:SetCurrentOptValue() end
 ---@param boolean boolean
 function CUIComboBox:SetVertScroll(boolean) end
----@param CUIWindow CUIWindow
-function CUIComboBox:DetachChild(CUIWindow) end
-function CUIComboBox:SetPPMode() end
-function CUIComboBox:WindowName() end
-function CUIComboBox:IsShown() end
-
----@param boolean boolean
-function CUIComboBox:Show(boolean) end
-function CUIComboBox:GetHeight()  end
-function CUIComboBox:GetWidth()  end
 ---@param number number
 function CUIComboBox:disable_id(number) end
-function CUIComboBox:IsEnabled() end
-function CUIComboBox:ResetPPMode() end
 ---@param number number
 function CUIComboBox:SetCurrentID(number) end
-function CUIComboBox:IsAutoDelete() end
 	
 
 
 ---@class CUICustomEdit:CUIWindow 
 CUICustomEdit = {}
 
----@param string string
-function CUICustomEdit:SetWindowName(string) end
 
 ---@param string string
 function CUICustomEdit:SetText(string) end
 ---@param CUICustomEdit CUICustomEdit
 function CUICustomEdit:SetNextFocusCapturer(CUICustomEdit) end
 function CUICustomEdit:GetText() end
----@param boolean boolean
-function CUICustomEdit:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUICustomEdit:AttachChild(CUIWindow) end
 
 ---@param boolean boolean
 function CUICustomEdit:CaptureFocus(boolean) end
----@param CUIWindow CUIWindow
-function CUICustomEdit:DetachChild(CUIWindow) end
-function CUICustomEdit:SetPPMode() end
-function CUICustomEdit:WindowName() end
-function CUICustomEdit:IsShown() end
-
----@param boolean boolean
-function CUICustomEdit:Show(boolean) end
-function CUICustomEdit:GetHeight()  end
-function CUICustomEdit:GetWidth()  end
----@param vector2 vector2
-function CUICustomEdit:SetWndSize(vector2) end
-function CUICustomEdit:IsEnabled() end
-function CUICustomEdit:ResetPPMode() end
----@param boolean boolean
-function CUICustomEdit:Enable(boolean) end
-function CUICustomEdit:IsAutoDelete() end
 
 
 ---@class CUICustomSpin:CUIWindow 
 CUICustomSpin = {}
 
----@param string string
-function CUICustomSpin:SetWindowName(string) end
 
 function CUICustomSpin:GetText() end
----@param boolean boolean
-function CUICustomSpin:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUICustomSpin:AttachChild(CUIWindow) end
 
----@param CUIWindow CUIWindow
-function CUICustomSpin:DetachChild(CUIWindow) end
-function CUICustomSpin:SetPPMode() end
-function CUICustomSpin:WindowName() end
-function CUICustomSpin:IsShown() end
 
----@param boolean boolean
-function CUICustomSpin:Show(boolean) end
-function CUICustomSpin:GetHeight()  end
-function CUICustomSpin:GetWidth()  end
----@param vector2 vector2
-function CUICustomSpin:SetWndSize(vector2) end
-function CUICustomSpin:IsEnabled() end
-function CUICustomSpin:ResetPPMode() end
----@param boolean boolean
-function CUICustomSpin:Enable(boolean) end
-function CUICustomSpin:IsAutoDelete() end
 
 
 ---@class CUIDialogWnd:CUIWindow 
 CUIDialogWnd = {}
 
 function CUIDialogWnd:HideDialog() end
----@param string string
-function CUIDialogWnd:SetWindowName(string) end
 
----@param boolean boolean
-function CUIDialogWnd:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUIDialogWnd:AttachChild(CUIWindow) end
 
 
 ---@param boolean boolean
 function CUIDialogWnd:ShowDialog(boolean) end
----@param CUIWindow CUIWindow
-function CUIDialogWnd:DetachChild(CUIWindow) end
-function CUIDialogWnd:SetPPMode() end
-function CUIDialogWnd:WindowName() end
-function CUIDialogWnd:IsShown() end
 function CUIDialogWnd:GetHolder() end
----@param boolean boolean
-function CUIDialogWnd:Show(boolean) end
-function CUIDialogWnd:GetHeight()  end
-function CUIDialogWnd:GetWidth()  end
----@param vector2 vector2
-function CUIDialogWnd:SetWndSize(vector2) end
-function CUIDialogWnd:IsEnabled() end
-function CUIDialogWnd:ResetPPMode() end
----@param boolean boolean
-function CUIDialogWnd:Enable(boolean) end
-function CUIDialogWnd:IsAutoDelete() end
 
 
 ---@class CUIScriptWnd:CUIDialogWnd,DLL_Pure 
@@ -2853,41 +2670,19 @@ CUIScriptWnd = {}
 
 function CUIScriptWnd:HideDialog() end
 function CUIScriptWnd:_ruct() end
----@param string string
-function CUIScriptWnd:SetWindowName(string) end
 
 function CUIScriptWnd:OnKeyboard(number, enum_EUIMessages) end
 function CUIScriptWnd:Update() end
 function CUIScriptWnd:AddCallback(string, number,  functor, object) end
----@param boolean boolean
-function CUIScriptWnd:SetAutoDelete(boolean) end
 function CUIScriptWnd:Dispatch(number, number) end
----@param boolean boolean
-function CUIScriptWnd:Show(boolean) end
----@param CUIWindow CUIWindow
-function CUIScriptWnd:AttachChild(CUIWindow) end
 function CUIScriptWnd:Register(CUIWindow, string) end
 
 ---@param boolean boolean
 function CUIScriptWnd:ShowDialog(boolean) end
----@param boolean boolean
-function CUIScriptWnd:Enable(boolean) end
----@param CUIWindow CUIWindow
-function CUIScriptWnd:DetachChild(CUIWindow) end
-function CUIScriptWnd:SetPPMode() end
-function CUIScriptWnd:WindowName() end
-function CUIScriptWnd:IsShown() end
 function CUIScriptWnd:GetHolder() end
 
-function CUIScriptWnd:GetHeight()  end
-function CUIScriptWnd:ResetPPMode() end
-function CUIScriptWnd:GetWidth()  end
-function CUIScriptWnd:IsEnabled() end
----@param vector2 vector2
-function CUIScriptWnd:SetWndSize(vector2) end
 ---@param string string
 function CUIScriptWnd:Load(string) end
-function CUIScriptWnd:IsAutoDelete() end
 	
 
 
@@ -2895,40 +2690,18 @@ function CUIScriptWnd:IsAutoDelete() end
 ---@overload fun(): CUIEditBox
 CUIEditBox = {}
 
----@param string string
-function CUIEditBox:SetWindowName(string) end
 
 ---@param string string
 function CUIEditBox:SetText(string) end
 ---@param CUICustomEdit CUICustomEdit
 function CUIEditBox:SetNextFocusCapturer(CUICustomEdit) end
 function CUIEditBox:GetText() end
----@param boolean boolean
-function CUIEditBox:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUIEditBox:AttachChild(CUIWindow) end
 
-function CUIEditBox:GetWidth()  end
-function CUIEditBox:SetPPMode() end
----@param CUIWindow CUIWindow
-function CUIEditBox:DetachChild(CUIWindow) end
 ---@param boolean boolean
 function CUIEditBox:CaptureFocus(boolean) end
-function CUIEditBox:WindowName() end
-function CUIEditBox:IsShown() end
----@param boolean boolean
-function CUIEditBox:Enable(boolean) end
 
-function CUIEditBox:GetHeight()  end
-function CUIEditBox:ResetPPMode() end
 ---@param string string
 function CUIEditBox:InitTexture(string) end
-function CUIEditBox:IsEnabled() end
----@param vector2 vector2
-function CUIEditBox:SetWndSize(vector2) end
----@param boolean boolean
-function CUIEditBox:Show(boolean) end
-function CUIEditBox:IsAutoDelete() end
 	
 
 
@@ -2936,40 +2709,18 @@ function CUIEditBox:IsAutoDelete() end
 ---@overload fun(): CUIEditBoxEx
 CUIEditBoxEx = {}
 
----@param string string
-function CUIEditBoxEx:SetWindowName(string) end
 
 ---@param string string
 function CUIEditBoxEx:SetText(string) end
 ---@param CUICustomEdit CUICustomEdit
 function CUIEditBoxEx:SetNextFocusCapturer(CUICustomEdit) end
 function CUIEditBoxEx:GetText() end
----@param boolean boolean
-function CUIEditBoxEx:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUIEditBoxEx:AttachChild(CUIWindow) end
 
-function CUIEditBoxEx:GetWidth()  end
-function CUIEditBoxEx:SetPPMode() end
----@param CUIWindow CUIWindow
-function CUIEditBoxEx:DetachChild(CUIWindow) end
 ---@param boolean boolean
 function CUIEditBoxEx:CaptureFocus(boolean) end
-function CUIEditBoxEx:WindowName() end
-function CUIEditBoxEx:IsShown() end
----@param boolean boolean
-function CUIEditBoxEx:Enable(boolean) end
 
-function CUIEditBoxEx:GetHeight()  end
-function CUIEditBoxEx:ResetPPMode() end
 ---@param string string
 function CUIEditBoxEx:InitTexture(string) end
-function CUIEditBoxEx:IsEnabled() end
----@param vector2 vector2
-function CUIEditBoxEx:SetWndSize(vector2) end
----@param boolean boolean
-function CUIEditBoxEx:Show(boolean) end
-function CUIEditBoxEx:IsAutoDelete() end
 	
 
 
@@ -2977,37 +2728,15 @@ function CUIEditBoxEx:IsAutoDelete() end
 ---@overload fun(): CUIFrameLineWnd
 CUIFrameLineWnd = {}
 
----@param string string
-function CUIFrameLineWnd:SetWindowName(string) end
 
 ---@param number number
 function CUIFrameLineWnd:SetHeight(number) end
----@param boolean boolean
-function CUIFrameLineWnd:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUIFrameLineWnd:AttachChild(CUIWindow) end
 
 ---@param number number
 function CUIFrameLineWnd:SetColor(number) end
-function CUIFrameLineWnd:GetWidth()  end
----@param CUIWindow CUIWindow
-function CUIFrameLineWnd:DetachChild(CUIWindow) end
-function CUIFrameLineWnd:SetPPMode() end
-function CUIFrameLineWnd:WindowName() end
-function CUIFrameLineWnd:IsShown() end
 
----@param boolean boolean
-function CUIFrameLineWnd:Show(boolean) end
-function CUIFrameLineWnd:GetHeight()  end
 ---@param number number
 function CUIFrameLineWnd:SetWidth(number) end
----@param vector2 vector2
-function CUIFrameLineWnd:SetWndSize(vector2) end
-function CUIFrameLineWnd:IsEnabled() end
-function CUIFrameLineWnd:ResetPPMode() end
----@param boolean boolean
-function CUIFrameLineWnd:Enable(boolean) end
-function CUIFrameLineWnd:IsAutoDelete() end
 	
 
 
@@ -3015,37 +2744,15 @@ function CUIFrameLineWnd:IsAutoDelete() end
 ---@overload fun(): CUIFrameWindow
 CUIFrameWindow = {}
 
----@param string string
-function CUIFrameWindow:SetWindowName(string) end
 
 ---@param number number
 function CUIFrameWindow:SetHeight(number) end
----@param boolean boolean
-function CUIFrameWindow:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUIFrameWindow:AttachChild(CUIWindow) end
 
 ---@param number number
 function CUIFrameWindow:SetColor(number) end
-function CUIFrameWindow:GetWidth()  end
----@param CUIWindow CUIWindow
-function CUIFrameWindow:DetachChild(CUIWindow) end
-function CUIFrameWindow:SetPPMode() end
-function CUIFrameWindow:WindowName() end
-function CUIFrameWindow:IsShown() end
 
----@param boolean boolean
-function CUIFrameWindow:Show(boolean) end
-function CUIFrameWindow:GetHeight()  end
 ---@param number number
 function CUIFrameWindow:SetWidth(number) end
----@param vector2 vector2
-function CUIFrameWindow:SetWndSize(vector2) end
-function CUIFrameWindow:IsEnabled() end
-function CUIFrameWindow:ResetPPMode() end
----@param boolean boolean
-function CUIFrameWindow:Enable(boolean) end
-function CUIFrameWindow:IsAutoDelete() end
 	
 
 
@@ -3091,10 +2798,6 @@ function CUILines:SetElipsis(boolean) end
 ---@overload fun(): CUIListBox
 CUIListBox = {}
 
----@param string string
-function CUIListBox:SetWindowName(string) end
----@param boolean boolean
-function CUIListBox:Enable(boolean) end
 ---@param CUIWindow CUIWindow
 function CUIListBox:RemoveWindow(CUIWindow) end
 function CUIListBox:ScrollToBegin() end
@@ -3102,23 +2805,8 @@ function CUIListBox:GetMinScrollPos() end
 ---@param CUIListBoxItem CUIListBoxItem
 function CUIListBox:AddExistingItem(CUIListBoxItem) end
 function CUIListBox:AddWindow(CUIWindow, boolean) end
-function CUIListBox:GetWidth()  end
-function CUIListBox:Clear() end
----@param CUIWindow CUIWindow
-function CUIListBox:DetachChild(CUIWindow) end
-function CUIListBox:SetPPMode() end
-function CUIListBox:IsShown() end
----@param boolean boolean
-function CUIListBox:Show(boolean) end
-function CUIListBox:GetHeight()  end
-function CUIListBox:IsEnabled() end
-function CUIListBox:ResetPPMode() end
 
 function CUIListBox:GetCurrentScrollPos() end
----@param boolean boolean
-function CUIListBox:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUIListBox:AttachChild(CUIWindow) end
 ---@param string string
 function CUIListBox:AddTextItem(string) end
 
@@ -3128,7 +2816,6 @@ function CUIListBox:RemoveItem(CUIWindow) end
 function CUIListBox:GetMaxScrollPos() end
 ---@param number number
 function CUIListBox:GetItemByIndex(number) end
-function CUIListBox:WindowName() end
 function CUIListBox:GetSelectedIndex() end
 ---@param number number
 function CUIListBox:SetSelectedIndex(number) end
@@ -3140,11 +2827,8 @@ function CUIListBox:GetSize() end
 function CUIListBox:RemoveAll() end
 ---@param boolean boolean
 function CUIListBox:ShowSelectedItem(boolean) end
----@param vector2 vector2
-function CUIListBox:SetWndSize(vector2) end
 ---@param number number
 function CUIListBox:GetItem(number) end
-function CUIListBox:IsAutoDelete() end
 	
 
 
@@ -3152,41 +2836,19 @@ function CUIListBox:IsAutoDelete() end
 ---@overload fun(number): CUIListBoxItem
 CUIListBoxItem = {}
 
----@param string string
-function CUIListBoxItem:SetWindowName(string) end
 
 ---@param number number
 function CUIListBoxItem:SetHeight(number) end
 ---@param number number
 function CUIListBoxItem:AddIconField(number) end
----@param boolean boolean
-function CUIListBoxItem:SetAutoDelete(boolean) end
 ---@param number number
 function CUIListBoxItem:SetTextColor(number) end
 function CUIListBoxItem:AddTextField(string, number) end
----@param CUIWindow CUIWindow
-function CUIListBoxItem:AttachChild(CUIWindow) end
 function CUIListBoxItem:GetTextItem() end
 
-function CUIListBoxItem:IsAutoDelete() end
----@param boolean boolean
-function CUIListBoxItem:Enable(boolean) end
----@param CUIWindow CUIWindow
-function CUIListBoxItem:DetachChild(CUIWindow) end
-function CUIListBoxItem:SetPPMode() end
-function CUIListBoxItem:WindowName() end
-function CUIListBoxItem:IsShown() end
-function CUIListBoxItem:ResetPPMode() end
 
-function CUIListBoxItem:GetHeight()  end
 ---@param number number
 function CUIListBoxItem:SetWidth(number) end
----@param boolean boolean
-function CUIListBoxItem:Show(boolean) end
-function CUIListBoxItem:IsEnabled() end
----@param vector2 vector2
-function CUIListBoxItem:SetWndSize(vector2) end
-function CUIListBoxItem:GetWidth()  end
 ---@param number number
 function CUIListBoxItem:SetColor(number) end
 	
@@ -3196,43 +2858,21 @@ function CUIListBoxItem:SetColor(number) end
 ---@overload fun(number): CUIListBoxItemMsgChain
 CUIListBoxItemMsgChain = {}
 
----@param string string
-function CUIListBoxItemMsgChain:SetWindowName(string) end
----@param boolean boolean
-function CUIListBoxItemMsgChain:Enable(boolean) end
 ---@param number number
 function CUIListBoxItemMsgChain:SetHeight(number) end
 ---@param number number
 function CUIListBoxItemMsgChain:AddIconField(number) end
----@param boolean boolean
-function CUIListBoxItemMsgChain:SetAutoDelete(boolean) end
 ---@param number number
 function CUIListBoxItemMsgChain:SetTextColor(number) end
 ---@param number number
 function CUIListBoxItemMsgChain:SetColor(number) end
----@param CUIWindow CUIWindow
-function CUIListBoxItemMsgChain:AttachChild(CUIWindow) end
-function CUIListBoxItemMsgChain:GetWidth()  end
 
----@param vector2 vector2
-function CUIListBoxItemMsgChain:SetWndSize(vector2) end
-function CUIListBoxItemMsgChain:IsShown() end
----@param CUIWindow CUIWindow
-function CUIListBoxItemMsgChain:DetachChild(CUIWindow) end
-function CUIListBoxItemMsgChain:SetPPMode() end
-function CUIListBoxItemMsgChain:WindowName() end
 function CUIListBoxItemMsgChain:AddTextField(string, number) end
----@param boolean boolean
-function CUIListBoxItemMsgChain:Show(boolean) end
 
 function CUIListBoxItemMsgChain:GetTextItem() end
 ---@param number number
 function CUIListBoxItemMsgChain:SetWidth(number) end
-function CUIListBoxItemMsgChain:GetHeight()  end
-function CUIListBoxItemMsgChain:IsEnabled() end
-function CUIListBoxItemMsgChain:ResetPPMode() end
 
-function CUIListBoxItemMsgChain:IsAutoDelete() end
 	
 
 
@@ -3242,36 +2882,14 @@ CUIMMShniaga = {}
 CUIMMShniaga.epi_main = 0
 CUIMMShniaga.epi_new_game = 1
 CUIMMShniaga.epi_new_network_game = 2
----@param string string
-function CUIMMShniaga:SetWindowName(string) end
 
----@param boolean boolean
-function CUIMMShniaga:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUIMMShniaga:AttachChild(CUIWindow) end
 ---@param enum_CUIMMShniaga__enum_page_id enum_CUIMMShniaga__enum_page_id
 function CUIMMShniaga:ShowPage(enum_CUIMMShniaga__enum_page_id) end
 
 function CUIMMShniaga:SetPage(enum_CUIMMShniaga__enum_page_id, string, string) end
 ---@param boolean boolean
 function CUIMMShniaga:SetVisibleMagnifier(boolean) end
----@param CUIWindow CUIWindow
-function CUIMMShniaga:DetachChild(CUIWindow) end
-function CUIMMShniaga:SetPPMode() end
-function CUIMMShniaga:WindowName() end
-function CUIMMShniaga:IsShown() end
 
----@param boolean boolean
-function CUIMMShniaga:Show(boolean) end
-function CUIMMShniaga:GetHeight()  end
-function CUIMMShniaga:GetWidth()  end
----@param vector2 vector2
-function CUIMMShniaga:SetWndSize(vector2) end
-function CUIMMShniaga:IsEnabled() end
-function CUIMMShniaga:ResetPPMode() end
----@param boolean boolean
-function CUIMMShniaga:Enable(boolean) end
-function CUIMMShniaga:IsAutoDelete() end
 	
 
 
@@ -3279,33 +2897,11 @@ function CUIMMShniaga:IsAutoDelete() end
 ---@overload fun(): CUIMapInfo
 CUIMapInfo = {}
 
----@param string string
-function CUIMapInfo:SetWindowName(string) end
 
 function CUIMapInfo:InitMap(string, string) end
----@param boolean boolean
-function CUIMapInfo:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUIMapInfo:AttachChild(CUIWindow) end
 
 function CUIMapInfo:Init(vector2, vector2) end
----@param CUIWindow CUIWindow
-function CUIMapInfo:DetachChild(CUIWindow) end
-function CUIMapInfo:SetPPMode() end
-function CUIMapInfo:WindowName() end
-function CUIMapInfo:IsShown() end
 
----@param boolean boolean
-function CUIMapInfo:Show(boolean) end
-function CUIMapInfo:GetHeight()  end
-function CUIMapInfo:GetWidth()  end
----@param vector2 vector2
-function CUIMapInfo:SetWndSize(vector2) end
-function CUIMapInfo:IsEnabled() end
-function CUIMapInfo:ResetPPMode() end
----@param boolean boolean
-function CUIMapInfo:Enable(boolean) end
-function CUIMapInfo:IsAutoDelete() end
 	
 
 
@@ -3315,8 +2911,6 @@ CUIMapList = {}
 
 function CUIMapList:IsEmpty() end
 function CUIMapList:StartDedicatedServer() end
----@param string string
-function CUIMapList:SetWindowName(string) end
 
 ---@param CUISpinText CUISpinText
 function CUIMapList:SetModeSelector(CUISpinText) end
@@ -3325,38 +2919,18 @@ function CUIMapList:ClearList() end
 function CUIMapList:SetMapInfo(CUIMapInfo) end
 function CUIMapList:OnModeChange() end
 function CUIMapList:LoadMapList() end
----@param boolean boolean
-function CUIMapList:SetAutoDelete(boolean) end
 ---@param string string
 function CUIMapList:GetCommandLine(string) end
 function CUIMapList:GetCurGameType() end
 
----@param CUIWindow CUIWindow
-function CUIMapList:AttachChild(CUIWindow) end
 function CUIMapList:SaveMapList() end
 
 ---@param CUIStatic CUIStatic
 function CUIMapList:SetMapPic(CUIStatic) end
 ---@param string string
 function CUIMapList:SetServerParams(string) end
----@param CUIWindow CUIWindow
-function CUIMapList:DetachChild(CUIWindow) end
-function CUIMapList:SetPPMode() end
-function CUIMapList:WindowName() end
-function CUIMapList:IsShown() end
 ---@param CUIComboBox CUIComboBox
 function CUIMapList:SetWeatherSelector(CUIComboBox) end
----@param boolean boolean
-function CUIMapList:Show(boolean) end
-function CUIMapList:GetHeight()  end
-function CUIMapList:GetWidth()  end
----@param vector2 vector2
-function CUIMapList:SetWndSize(vector2) end
-function CUIMapList:IsEnabled() end
-function CUIMapList:ResetPPMode() end
----@param boolean boolean
-function CUIMapList:Enable(boolean) end
-function CUIMapList:IsAutoDelete() end
 	
 
 
@@ -3366,43 +2940,21 @@ CUIMessageBox = {}
 
 ---@param string string
 function CUIMessageBox:InitMessageBox(string) end
----@param string string
-function CUIMessageBox:SetWindowName(string) end
 
 ---@param string string
 function CUIMessageBox:SetText(string) end
 function CUIMessageBox:TextControl() end
----@param boolean boolean
-function CUIMessageBox:SetAutoDelete(boolean) end
 function CUIMessageBox:GetPassword() end
 function CUIMessageBox:GetHost() end
 ---@param boolean boolean
 function CUIMessageBox:SetStretchTexture(boolean) end
----@param CUIWindow CUIWindow
-function CUIMessageBox:AttachChild(CUIWindow) end
----@param boolean boolean
-function CUIMessageBox:Enable(boolean) end
 ---@param Frect Frect
 function CUIMessageBox:SetTextureRect(Frect) end
-function CUIMessageBox:ResetPPMode() end
----@param boolean boolean
-function CUIMessageBox:Show(boolean) end
----@param CUIWindow CUIWindow
-function CUIMessageBox:DetachChild(CUIWindow) end
-function CUIMessageBox:SetPPMode() end
-function CUIMessageBox:WindowName() end
-function CUIMessageBox:IsShown() end
 
 
-function CUIMessageBox:GetHeight()  end
-function CUIMessageBox:GetWidth()  end
 ---@param string string
 function CUIMessageBox:InitTexture(string) end
-function CUIMessageBox:IsEnabled() end
----@param vector2 vector2
-function CUIMessageBox:SetWndSize(vector2) end
 function CUIMessageBox:GetTextureRect() end
-function CUIMessageBox:IsAutoDelete() end
 	
 
 
@@ -3413,38 +2965,16 @@ CUIMessageBoxEx = {}
 function CUIMessageBoxEx:HideDialog() end
 ---@param string string
 function CUIMessageBoxEx:InitMessageBox(string) end
----@param string string
-function CUIMessageBoxEx:SetWindowName(string) end
 
 ---@param string string
 function CUIMessageBoxEx:SetText(string) end
----@param boolean boolean
-function CUIMessageBoxEx:SetAutoDelete(boolean) end
 function CUIMessageBoxEx:GetPassword() end
----@param CUIWindow CUIWindow
-function CUIMessageBoxEx:AttachChild(CUIWindow) end
 function CUIMessageBoxEx:GetHost() end
 
 ---@param boolean boolean
 function CUIMessageBoxEx:ShowDialog(boolean) end
----@param boolean boolean
-function CUIMessageBoxEx:Enable(boolean) end
----@param CUIWindow CUIWindow
-function CUIMessageBoxEx:DetachChild(CUIWindow) end
-function CUIMessageBoxEx:SetPPMode() end
-function CUIMessageBoxEx:WindowName() end
-function CUIMessageBoxEx:IsShown() end
 function CUIMessageBoxEx:GetHolder() end
 
-function CUIMessageBoxEx:GetHeight()  end
-function CUIMessageBoxEx:ResetPPMode() end
-function CUIMessageBoxEx:GetWidth()  end
-function CUIMessageBoxEx:IsEnabled() end
----@param vector2 vector2
-function CUIMessageBoxEx:SetWndSize(vector2) end
----@param boolean boolean
-function CUIMessageBoxEx:Show(boolean) end
-function CUIMessageBoxEx:IsAutoDelete() end
 	
 
 
@@ -3472,17 +3002,11 @@ function COptionsManager:OptionsPostAccept() end
 ---@overload fun(): CUIProgressBar
 CUIProgressBar = {}
 
----@param string string
-function CUIProgressBar:SetWindowName(string) end
 
 function CUIProgressBar:GetRange_max() end
----@param boolean boolean
-function CUIProgressBar:SetAutoDelete(boolean) end
 function CUIProgressBar:GetRange_min() end
 ---@param number number
 function CUIProgressBar:SetProgressPos(number) end
----@param CUIWindow CUIWindow
-function CUIProgressBar:AttachChild(CUIWindow) end
 
 function CUIProgressBar:GetProgressPos() end
 ---@param boolean boolean
@@ -3497,23 +3021,7 @@ function CUIProgressBar:SetMinColor(number) end
 function CUIProgressBar:SetMiddleColor(number) end
 ---@param number number
 function CUIProgressBar:SetMaxColor(number) end
----@param CUIWindow CUIWindow
-function CUIProgressBar:DetachChild(CUIWindow) end
-function CUIProgressBar:SetPPMode() end
-function CUIProgressBar:WindowName() end
-function CUIProgressBar:IsShown() end
 
----@param boolean boolean
-function CUIProgressBar:Show(boolean) end
-function CUIProgressBar:GetHeight()  end
-function CUIProgressBar:GetWidth()  end
----@param vector2 vector2
-function CUIProgressBar:SetWndSize(vector2) end
-function CUIProgressBar:IsEnabled() end
-function CUIProgressBar:ResetPPMode() end
----@param boolean boolean
-function CUIProgressBar:Enable(boolean) end
-function CUIProgressBar:IsAutoDelete() end
 	
 
 
@@ -3521,43 +3029,21 @@ function CUIProgressBar:IsAutoDelete() end
 ---@overload fun(): CUIPropertiesBox
 CUIPropertiesBox = {}
 
----@param string string
-function CUIPropertiesBox:SetWindowName(string) end
 
 ---@param number number
 function CUIPropertiesBox:SetHeight(number) end
 ---@param string string
 function CUIPropertiesBox:AddItem(string) end
----@param boolean boolean
-function CUIPropertiesBox:SetAutoDelete(boolean) end
 function CUIPropertiesBox:AutoUpdateSize() end
 ---@param number number
 function CUIPropertiesBox:RemoveItem(number) end
 function CUIPropertiesBox:RemoveAll() end
----@param CUIWindow CUIWindow
-function CUIPropertiesBox:AttachChild(CUIWindow) end
 function CUIPropertiesBox:Hide() end
 
-function CUIPropertiesBox:IsAutoDelete() end
----@param boolean boolean
-function CUIPropertiesBox:Enable(boolean) end
----@param CUIWindow CUIWindow
-function CUIPropertiesBox:DetachChild(CUIWindow) end
-function CUIPropertiesBox:SetPPMode() end
-function CUIPropertiesBox:WindowName() end
-function CUIPropertiesBox:IsShown() end
-function CUIPropertiesBox:ResetPPMode() end
 
-function CUIPropertiesBox:GetHeight()  end
 ---@param number number
 function CUIPropertiesBox:SetWidth(number) end
----@param boolean boolean
-function CUIPropertiesBox:Show(boolean) end
 function CUIPropertiesBox:Show(number, number) end
-function CUIPropertiesBox:IsEnabled() end
----@param vector2 vector2
-function CUIPropertiesBox:SetWndSize(vector2) end
-function CUIPropertiesBox:GetWidth()  end
 ---@param number number
 function CUIPropertiesBox:SetColor(number) end
 	
@@ -3567,8 +3053,6 @@ function CUIPropertiesBox:SetColor(number) end
 ---@overload fun(): CUIScrollView
 CUIScrollView = {}
 
----@param string string
-function CUIScrollView:SetWindowName(string) end
 
 ---@param number number
 function CUIScrollView:SetScrollPos(number) end
@@ -3577,34 +3061,13 @@ function CUIScrollView:RemoveWindow(CUIWindow) end
 function CUIScrollView:ScrollToBegin() end
 ---@param boolean boolean
 function CUIScrollView:SetFixedScrollBar(boolean) end
----@param boolean boolean
-function CUIScrollView:SetAutoDelete(boolean) end
 function CUIScrollView:GetCurrentScrollPos() end
 function CUIScrollView:AddWindow(CUIWindow, boolean) end
 function CUIScrollView:GetMaxScrollPos() end
----@param CUIWindow CUIWindow
-function CUIScrollView:AttachChild(CUIWindow) end
 function CUIScrollView:GetMinScrollPos() end
 
 function CUIScrollView:ScrollToEnd() end
 function CUIScrollView:Clear() end
----@param CUIWindow CUIWindow
-function CUIScrollView:DetachChild(CUIWindow) end
-function CUIScrollView:SetPPMode() end
-function CUIScrollView:WindowName() end
-function CUIScrollView:IsShown() end
-
----@param boolean boolean
-function CUIScrollView:Show(boolean) end
-function CUIScrollView:GetHeight()  end
-function CUIScrollView:GetWidth()  end
----@param vector2 vector2
-function CUIScrollView:SetWndSize(vector2) end
-function CUIScrollView:IsEnabled() end
-function CUIScrollView:ResetPPMode() end
----@param boolean boolean
-function CUIScrollView:Enable(boolean) end
-function CUIScrollView:IsAutoDelete() end
 	
 
 
@@ -3612,40 +3075,18 @@ function CUIScrollView:IsAutoDelete() end
 ---@overload fun(): CUISleepStatic
 CUISleepStatic = {}
 
----@param string string
-function CUISleepStatic:SetWindowName(string) end
 
 function CUISleepStatic:TextControl() end
 ---@param boolean boolean
-function CUISleepStatic:SetAutoDelete(boolean) end
----@param boolean boolean
 function CUISleepStatic:SetStretchTexture(boolean) end
----@param CUIWindow CUIWindow
-function CUISleepStatic:AttachChild(CUIWindow) end
----@param boolean boolean
-function CUISleepStatic:Enable(boolean) end
 ---@param Frect Frect
 ---@param Frect Frect
 function CUISleepStatic:SetTextureRect(Frect) end
-function CUISleepStatic:ResetPPMode() end
----@param boolean boolean
-function CUISleepStatic:Show(boolean) end
----@param CUIWindow CUIWindow
-function CUISleepStatic:DetachChild(CUIWindow) end
-function CUISleepStatic:SetPPMode() end
-function CUISleepStatic:WindowName() end
-function CUISleepStatic:IsShown() end
 
 
-function CUISleepStatic:GetHeight()  end
-function CUISleepStatic:GetWidth()  end
 ---@param string string
 function CUISleepStatic:InitTexture(string) end
-function CUISleepStatic:IsEnabled() end
----@param vector2 vector2
-function CUISleepStatic:SetWndSize(vector2) end
 function CUISleepStatic:GetTextureRect() end
-function CUISleepStatic:IsAutoDelete() end
 	
 
 
@@ -3653,32 +3094,10 @@ function CUISleepStatic:IsAutoDelete() end
 ---@overload fun(): CUISpinFlt
 CUISpinFlt = {}
 
----@param string string
-function CUISpinFlt:SetWindowName(string) end
 
 function CUISpinFlt:GetText() end
----@param boolean boolean
-function CUISpinFlt:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUISpinFlt:AttachChild(CUIWindow) end
 
----@param CUIWindow CUIWindow
-function CUISpinFlt:DetachChild(CUIWindow) end
-function CUISpinFlt:SetPPMode() end
-function CUISpinFlt:WindowName() end
-function CUISpinFlt:IsShown() end
-function CUISpinFlt:GetWidth()  end
 
-function CUISpinFlt:GetHeight()  end
----@param boolean boolean
-function CUISpinFlt:Enable(boolean) end
-function CUISpinFlt:ResetPPMode() end
-function CUISpinFlt:IsEnabled() end
----@param vector2 vector2
-function CUISpinFlt:SetWndSize(vector2) end
----@param boolean boolean
-function CUISpinFlt:Show(boolean) end
-function CUISpinFlt:IsAutoDelete() end
 	
 
 
@@ -3686,32 +3105,10 @@ function CUISpinFlt:IsAutoDelete() end
 ---@overload fun(): CUISpinNum
 CUISpinNum = {}
 
----@param string string
-function CUISpinNum:SetWindowName(string) end
 
 function CUISpinNum:GetText() end
----@param boolean boolean
-function CUISpinNum:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUISpinNum:AttachChild(CUIWindow) end
 
----@param CUIWindow CUIWindow
-function CUISpinNum:DetachChild(CUIWindow) end
-function CUISpinNum:SetPPMode() end
-function CUISpinNum:WindowName() end
-function CUISpinNum:IsShown() end
-function CUISpinNum:GetWidth()  end
 
-function CUISpinNum:GetHeight()  end
----@param boolean boolean
-function CUISpinNum:Enable(boolean) end
-function CUISpinNum:ResetPPMode() end
-function CUISpinNum:IsEnabled() end
----@param vector2 vector2
-function CUISpinNum:SetWndSize(vector2) end
----@param boolean boolean
-function CUISpinNum:Show(boolean) end
-function CUISpinNum:IsAutoDelete() end
 	
 
 
@@ -3719,32 +3116,10 @@ function CUISpinNum:IsAutoDelete() end
 ---@overload fun(): CUISpinText
 CUISpinText = {}
 
----@param string string
-function CUISpinText:SetWindowName(string) end
 
 function CUISpinText:GetText() end
----@param boolean boolean
-function CUISpinText:SetAutoDelete(boolean) end
----@param CUIWindow CUIWindow
-function CUISpinText:AttachChild(CUIWindow) end
 
----@param CUIWindow CUIWindow
-function CUISpinText:DetachChild(CUIWindow) end
-function CUISpinText:SetPPMode() end
-function CUISpinText:WindowName() end
-function CUISpinText:IsShown() end
-function CUISpinText:GetWidth()  end
 
-function CUISpinText:GetHeight()  end
----@param boolean boolean
-function CUISpinText:Enable(boolean) end
-function CUISpinText:ResetPPMode() end
-function CUISpinText:IsEnabled() end
----@param vector2 vector2
-function CUISpinText:SetWndSize(vector2) end
----@param boolean boolean
-function CUISpinText:Show(boolean) end
-function CUISpinText:IsAutoDelete() end
 	
 
 
@@ -3752,43 +3127,21 @@ function CUISpinText:IsAutoDelete() end
 ---@overload fun(): CUIStatic
 CUIStatic = {}
 
----@param string string
-function CUIStatic:SetWindowName(string) end
 
 function CUIStatic:TextControl() end
----@param boolean boolean
-function CUIStatic:SetAutoDelete(boolean) end
 function CUIStatic:GetTextureRect() end
----@param CUIWindow CUIWindow
-function CUIStatic:AttachChild(CUIWindow) end
 ---@param boolean boolean
 function CUIStatic:SetStretchTexture(boolean) end
 
 ---@param Frect Frect
 ---@param Frect Frect
 function CUIStatic:SetTextureRect(Frect) end
----@param vector2 vector2
-function CUIStatic:SetWndSize(vector2) end
----@param CUIWindow CUIWindow
-function CUIStatic:DetachChild(CUIWindow) end
-function CUIStatic:SetPPMode() end
-function CUIStatic:WindowName() end
-function CUIStatic:IsShown() end
 
----@param boolean boolean
-function CUIStatic:Show(boolean) end
-function CUIStatic:GetHeight()  end
-function CUIStatic:GetWidth()  end
 ---@param string string
 function CUIStatic:InitTexture(string) end
 function CUIStatic:GetTextureColor() end
 ---@param number number
 function CUIStatic:SetTextureColor(number) end
-function CUIStatic:IsEnabled() end
-function CUIStatic:ResetPPMode() end
----@param boolean boolean
-function CUIStatic:Enable(boolean) end
-function CUIStatic:IsAutoDelete() end
 -- Tronex: rotation
 ---@param boolean boolean
 function CUIStatic:EnableHeading(boolean) end
@@ -3806,40 +3159,18 @@ function CUIStatic:SetHeading(boolean) end
 ---@overload fun(): CUITabButton
 CUITabButton = {}
 
----@param string string
-function CUITabButton:SetWindowName(string) end
 
 function CUITabButton:TextControl() end
----@param boolean boolean
-function CUITabButton:SetAutoDelete(boolean) end
----@param boolean boolean
-function CUITabButton:Enable(boolean) end
----@param CUIWindow CUIWindow
-function CUITabButton:AttachChild(CUIWindow) end
 function CUITabButton:GetTextureRect() end
 
----@param vector2 vector2
-function CUITabButton:SetWndSize(vector2) end
 
----@param CUIWindow CUIWindow
-function CUITabButton:DetachChild(CUIWindow) end
-function CUITabButton:SetPPMode() end
-function CUITabButton:WindowName() end
-function CUITabButton:IsShown() end
 ---@param Frect Frect
 ---@param Frect Frect
 function CUITabButton:SetTextureRect(Frect) end
----@param boolean boolean
-function CUITabButton:Show(boolean) end
-function CUITabButton:GetHeight()  end
-function CUITabButton:GetWidth()  end
 ---@param string string
 function CUITabButton:InitTexture(string) end
-function CUITabButton:IsEnabled() end
-function CUITabButton:ResetPPMode() end
 ---@param boolean boolean
 function CUITabButton:SetStretchTexture(boolean) end
-function CUITabButton:IsAutoDelete() end
 	
 
 
@@ -3847,17 +3178,11 @@ function CUITabButton:IsAutoDelete() end
 ---@overload fun(): CUITabControl
 CUITabControl = {}
 
----@param string string
-function CUITabControl:SetWindowName(string) end
 
----@param boolean boolean
-function CUITabControl:SetAutoDelete(boolean) end
 function CUITabControl:GetActiveId() end
 ---@param string string
 function CUITabControl:SetActiveTab(string) end
 function CUITabControl:GetTabsCount()  end
----@param CUIWindow CUIWindow
-function CUITabControl:AttachChild(CUIWindow) end
 ---@param string string
 function CUITabControl:GetButtonById(string) end
 
@@ -3869,23 +3194,7 @@ function CUITabControl:AddItem(CUITabButton) end
 ---@param vector2 vector2
 ---@param vector2 vector2
 function CUITabControl:AddItem(string, string, vector2, vector2) end
----@param CUIWindow CUIWindow
-function CUITabControl:DetachChild(CUIWindow) end
-function CUITabControl:SetPPMode() end
-function CUITabControl:WindowName() end
-function CUITabControl:IsShown() end
 
----@param boolean boolean
-function CUITabControl:Show(boolean) end
-function CUITabControl:GetHeight()  end
-function CUITabControl:GetWidth()  end
----@param vector2 vector2
-function CUITabControl:SetWndSize(vector2) end
-function CUITabControl:IsEnabled() end
-function CUITabControl:ResetPPMode() end
----@param boolean boolean
-function CUITabControl:Enable(boolean) end
-function CUITabControl:IsAutoDelete() end
 	
 
 
@@ -3896,50 +3205,28 @@ CUITextWnd = {}
 
 function CUITextWnd:GetFont() end
 function CUITextWnd:SetTextOffset(number, number) end
----@param string string
-function CUITextWnd:SetWindowName(string) end
 
 ---@param string string
 function CUITextWnd:SetText(string) end
----@param vector2 vector2
-function CUITextWnd:SetWndSize(vector2) end
 ---@param enum_CGameFont__EAligment enum_CGameFont__EAligment
 function CUITextWnd:SetTextAlignment(enum_CGameFont__EAligment) end
 ---@param boolean boolean
 function CUITextWnd:SetTextComplexMode(boolean) end
 function CUITextWnd:GetText() end
----@param boolean boolean
-function CUITextWnd:SetAutoDelete(boolean) end
 function CUITextWnd:GetTextColor() end
 ---@param number number
 function CUITextWnd:SetTextColor(number) end
 ---@param CGameFont CGameFont
 function CUITextWnd:SetFont(CGameFont) end
----@param CUIWindow CUIWindow
-function CUITextWnd:AttachChild(CUIWindow) end
 ---@param string string
 function CUITextWnd:SetTextST(string) end
 
 function CUITextWnd:AdjustHeightToText() end
 function CUITextWnd:AdjustWidthToText() end
----@param CUIWindow CUIWindow
-function CUITextWnd:DetachChild(CUIWindow) end
-function CUITextWnd:SetPPMode() end
-function CUITextWnd:WindowName() end
-function CUITextWnd:IsShown() end
 ---@param boolean boolean
 function CUITextWnd:SetEllipsis(boolean) end
----@param boolean boolean
-function CUITextWnd:Show(boolean) end
-function CUITextWnd:GetHeight()  end
-function CUITextWnd:GetWidth()  end
 ---@param enum_EVTextAlignment enum_EVTextAlignment
 function CUITextWnd:SetVTextAlignment(enum_EVTextAlignment) end
-function CUITextWnd:IsEnabled() end
-function CUITextWnd:ResetPPMode() end
----@param boolean boolean
-function CUITextWnd:Enable(boolean) end
-function CUITextWnd:IsAutoDelete() end
 	
 
 
@@ -3947,15 +3234,9 @@ function CUITextWnd:IsAutoDelete() end
 ---@overload fun(): CUITrackBar
 CUITrackBar = {}
 
----@param string string
-function CUITrackBar:SetWindowName(string) end
 
 ---@param boolean boolean
-function CUITrackBar:SetAutoDelete(boolean) end
----@param boolean boolean
 function CUITrackBar:SetCheck(boolean) end
----@param CUIWindow CUIWindow
-function CUITrackBar:AttachChild(CUIWindow) end
 function CUITrackBar:SetCurrentValue() end
 
 function CUITrackBar:GetCheck() end
@@ -3967,23 +3248,6 @@ function CUITrackBar:SetFValue(number) end
 function CUITrackBar:SetIValue(number) end
 ---@param number number
 function CUITrackBar:SetStep(number) end
----@param CUIWindow CUIWindow
-function CUITrackBar:DetachChild(CUIWindow) end
-function CUITrackBar:SetPPMode() end
-function CUITrackBar:WindowName() end
-function CUITrackBar:IsShown() end
-
----@param boolean boolean
-function CUITrackBar:Show(boolean) end
-function CUITrackBar:GetHeight()  end
-function CUITrackBar:GetWidth()  end
----@param vector2 vector2
-function CUITrackBar:SetWndSize(vector2) end
-function CUITrackBar:IsEnabled() end
-function CUITrackBar:ResetPPMode() end
----@param boolean boolean
-function CUITrackBar:Enable(boolean) end
-function CUITrackBar:IsAutoDelete() end
 	
 
 
