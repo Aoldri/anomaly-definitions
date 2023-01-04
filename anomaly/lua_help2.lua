@@ -2553,7 +2553,6 @@ function CUI3tButton:GetTextureRect() end
 
 
 ---@param Frect Frect
----@param Frect Frect
 function CUI3tButton:SetTextureRect(Frect) end
 ---@param string string
 function CUI3tButton:InitTexture(string) end
@@ -2568,7 +2567,6 @@ CUIButton = {}
 function CUIButton:TextControl() end
 ---@param boolean boolean
 function CUIButton:SetStretchTexture(boolean) end
----@param Frect Frect
 ---@param Frect Frect
 function CUIButton:SetTextureRect(Frect) end
 
@@ -3080,7 +3078,6 @@ function CUISleepStatic:TextControl() end
 ---@param boolean boolean
 function CUISleepStatic:SetStretchTexture(boolean) end
 ---@param Frect Frect
----@param Frect Frect
 function CUISleepStatic:SetTextureRect(Frect) end
 
 
@@ -3134,7 +3131,6 @@ function CUIStatic:GetTextureRect() end
 function CUIStatic:SetStretchTexture(boolean) end
 
 ---@param Frect Frect
----@param Frect Frect
 function CUIStatic:SetTextureRect(Frect) end
 
 ---@param string string
@@ -3164,7 +3160,6 @@ function CUITabButton:TextControl() end
 function CUITabButton:GetTextureRect() end
 
 
----@param Frect Frect
 ---@param Frect Frect
 function CUITabButton:SetTextureRect(Frect) end
 ---@param string string
@@ -3268,10 +3263,12 @@ function CUIWindow:AttachChild(CUIWindow) end
 function CUIWindow:DetachChild(CUIWindow) end
 function CUIWindow:SetPPMode() end
 function CUIWindow:WindowName() end
+---@return boolean
 function CUIWindow:IsShown() end
 function CUIWindow:ResetPPMode() end
 ---@param Frect Frect
 function CUIWindow:SetWndRect(Frect) end
+---@return number
 function CUIWindow:GetHeight()  end
 ---@param boolean boolean
 function CUIWindow:Show(boolean) end
@@ -3279,10 +3276,13 @@ function CUIWindow:Show(boolean) end
 function CUIWindow:GetWndPos() end
 ---@param vector2 vector2
 function CUIWindow:SetWndPos(vector2) end
+---@return boolean
 function CUIWindow:IsEnabled() end
 ---@param vector2 vector2
 function CUIWindow:SetWndSize(vector2) end
+---@return number
 function CUIWindow:GetWidth()  end
+---@return boolean
 function CUIWindow:IsAutoDelete() end
 ---@param boolean boolean
 function CUIWindow:AllowMovement(boolean) end
