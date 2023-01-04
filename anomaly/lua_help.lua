@@ -4,27 +4,46 @@
 -- Global
 --------------------------
 function game_ini() end
+---@param number number
+---@param number number
 function bit_and(number, number) end
 function device() end
+
+---@param action_base action_base
 function cast_planner(action_base) end
 function IsGameTypeSingle() end
 function game_graph() end
+---@param number number
 function dik_to_bind(number) end
 function render_get_dx_level() end
+---@param ini_file ini_file
+---@param string string
 function sell_condition(ini_file, string) end
+---@param number number
+---@param number number
 function sell_condition(number, number) end
+---@param ini_file ini_file
+---@param string string
 function buy_condition(ini_file, string) end
+---@param number number
+---@param number number
 function buy_condition(number, number) end
+---@param string string
 function create_ini_file(string) end
 function get_hud() end
+---@param string string
 function error_log(string) end
 function command_line() end
 function getFS() end
+---@param string string
 function valid_saved_game(string) end
 function get_console() end
 function app_ready() end
 function IsDynamicMusic() end
+---@param string string
 function log(string) end
+---@param ini_file ini_file
+---@param string string
 function show_condition(ini_file, string) end
 function IsImportantSave() end
 function system_ini() end
@@ -33,18 +52,29 @@ function reload_system_ini() end
 function alife() end
 function flush() end
 function editor() end
+---@param number number
+---@param number number
 function bit_or(number, number) end
+
+---@param string string
 function prefetch(string) end
 function time_global() end
 -- like time_global but not stopped when the game is paused (used for some UI screens)
 function time_continual() end
 function verify_if_thread_is_running() end
 function script_server_object_version() end
+---@param number number
 function bit_not(number) end
 function ef_storage() end
 function user_name() end
+---@param number number
+---@param number number
 function bit_xor(number, number) end
 
+---@param number number
+---@param number number
+---@param number number
+---@param number number
 function GetARGB(number, number, number, number) end
 function GetFontSmall() end
 function GetFontMedium() end
@@ -61,83 +91,174 @@ function GetFontGraffiti50Russian() end
 -- Level Namespace
 --------------------------
 level = {}
+---@param string string
+---@param number number
 function level.add_complex_effector(string, number) end
 function level.enable_input() end
+---@param game_object game_object
 function level.check_object(game_object) end
+---@param number number
+---@param string string
+---@param string string
 function level.map_change_spot_hint(number, string, string) end
 function level.game_id() end
+---@param vector vector
 function level.vertex_id(vector) end
+---@param number number
+---@param vector vector
+---@param number number
 function level.vertex_in_direction(number, vector, number) end
+---@param number number
+---@param number number
+---@param number number
 function level.change_game_time(number, number, number) end
+---@param number number
 function level.remove_complex_effector(number) end
 function level.get_time_days() end
+---@param number number
+---@param number number
+---@param number number
 function level.set_pp_effector_factor(number, number, number) end
+---@param number number
+---@param number number
 function level.set_pp_effector_factor(number, number) end
 function level.rain_factor() end
 -- Searge 
 function level.get_rain_volume()end
+---@param number number
 function level.remove_pp_effector(number) end
+---@param string string
+---@param number number
+---@param boolean boolean
 function level.add_pp_effector(string, number, boolean) end
 function level.get_bounding_volume() end
+---@param number number
 function level.set_snd_volume(number) end
+---@param string string
+---@param number number
+---@param boolean boolean
+---@param string string
+---@param number number
+---@param boolean boolean
+---@param number number
 function level.add_cam_effector(string, number, boolean, string, number, boolean, number) end
+---@param functor function
+---@param functor function
 function level.add_call( functor,  functor) end
+---@param object object
+---@param functor function
+---@param functor function
 function level.add_call(object,  functor,  functor) end
+---@param object object
+---@param string string
+---@param string string
 function level.add_call(object, string, string) end
+---@param string string
 function level.set_weather_fx(string) end
 function level.get_snd_volume() end
+---@param object object
 function level.remove_calls_for_object(object) end
+---@param string string
 function level.prefetch_sound(string) end
+---@param string string
+---@param number number
+---@param functor function
 function level.iterate_sounds(string, number, functor) end
+---@param string string
+---@param number number
+---@param object object
+---@param functor function
 function level.iterate_sounds(string, number, object, functor) end
 function level.name() end
 function level.environment() end
+---@param number number
 function level.remove_cam_effector(number) end
+---@param number number
+---@param vector vector
 function level.high_cover_in_direction(number,  vector) end
+---@param vector vector
 function level.spawn_phantom( vector) end
+---@param number number
+---@return game_object
+---@param number number
 function level.object_by_id(number) end
+---@param string string
 function level.debug_object(string) end
 function level.get_weather() end
 function level.present() end
 function level.hide_indicators() end
 function level.physics_world() end
 function level.get_time_hours() end
+---@param functor function
+---@param functor function
 function level.remove_call( functor,  functor) end
+---@param object object
+---@param functor function
+---@param functor function
 function level.remove_call(object,  functor,  functor) end
+---@param object object
+---@param string string
+---@param string string
 function level.remove_call(object, string, string) end
+---@param string string
+---@param boolean boolean
 function level.set_weather(string, boolean) end
 function level.show_indicators() end
 function level.get_game_difficulty() end
+---@param number number
+---@param string string
 function level.map_remove_object_spot(number, string) end
+---@param CUIDialogWnd CUIDialogWnd
 function level.remove_dialog_to_render(CUIDialogWnd) end
 function level.stop_weather_fx() end
+---@param string string
 function level.patrol_path_exists(string) end
+---@param number number
 function level.vertex_position(number) end
+---@param boolean boolean
 function level.show_weapon(boolean) end
 function level.get_wfx_time() end
 function level.disable_input() end
+---@param number number
+---@param string string
+---@param string string
 function level.map_add_object_spot(number, string, string) end
 function level.get_time_minutes() end
 function level.get_time_factor() end
+---@param number number
+---@param string string
+---@param string string
 function level.map_add_object_spot_ser(number, string, string) end
+---@param enum_ESingleGameDifficulty enum_ESingleGameDifficulty
 function level.set_game_difficulty(enum_ESingleGameDifficulty) end
+---@param number number
+---@param vector vector
 function level.low_cover_in_direction(number,  vector) end
 function level.is_wfx_playing() end
+---@param number number
 function level.set_time_factor(number) end
 function level.client_spawn_manager() end
+---@param number number
+---@param string string
 function level.map_has_object_spot(number, string) end
+---@param CUIDialogWnd CUIDialogWnd
 function level.add_dialog_to_render(CUIDialogWnd) end
+---@param string string
+---@param number number
 function level.start_weather_fx_from_time(string, number) end
 function level.hide_indicators_safe() end
 function level.debug_actor() end
--- Alundaio: returns target game_object at cursor 
+-- Alundaio: returns target game_object at cursor
+---@return game_object
 function level.get_target_obj()end
 -- Alundaio: returns distance of target at cursor  
+---@return number
 function level.get_target_dist()end
 -- Alundaio: return number (bone id) 
+---@return number
 function level.get_target_element()end
--- Alundaio: update level packet
 
+-- Alundaio: update level packet
 ---@param net_packet net_packet
 ---@param bReliable? boolean
 ---@param bSequential? boolean
@@ -147,43 +268,68 @@ function level.send(net_packet, bReliable, bSequential, bHighPriority, bSendImme
 -- REZY: returns movement state of actor 
 function level.actor_moving_state()end
 -- REZY: init a key press event 
+---@param cmd cmd
 function level.press_action(cmd)   end
 -- REZY: init a key press event  
+---@param cmd cmd
 function level.release_action(cmd) end
 -- REZY: init a key press event 
+---@param cmd cmd
 function level.hold_action(cmd)    end
 -- returns a float, HUD sensor value 
 function level.get_env_rads()end
 -- functor passes game objects, returning true breaks the functor 
 --(pos, radius, functor)
+---@param vector vector
+---@param number number
+---@param functor function
 function level.iterate_nearest( vector, number, functor) end
 
 relation_registry = {}
+---@param string string
+---@param number number
+---@param number number
 function relation_registry.change_community_goodwill(string, number, number) end
+---@param string string
+---@param string string
 function relation_registry.community_relation(string, string) end
+---@param string string
+---@param number number
+---@param number number
 function relation_registry.set_community_goodwill(string, number, number) end
+---@param string string
+---@param number number
 function relation_registry.community_goodwill(string, number) end
+---@param string string
+---@param string string
+---@param number number
 function relation_registry.set_community_relation(string, string, number) end
 
 main_menu = {}
 function main_menu.get_main_menu() end
 
 game = {}
+---@param string string
 function game.translate_string(string) end
 function game.time() end
 function game.get_game_time() end
+---@param string string
 function game.start_tutorial(string) end
 function game.has_active_tutorial() end
 function game.stop_tutorial() end
 -- REZY: clear all xml cache in engine
 function game.reload_ui_xml()end
 -- REZY: for NV effect, booster for r2_sun_lumscale_amb
+---@param number number
 function game.set_nv_lumfactor(number)end
 -- REZY: to block actor ladder interaction (for item use animations or grenade quickthrow)
+---@param boolean boolean
 function game.set_actor_allow_ladder(boolean)end
 -- with extention
+---@param string string
 function game.prefetch_texture(string)end
 -- without extention
+---@param string string
 function game.prefetch_model(string)end
 function game.actor_lower_weapon() end
 function game.actor_weapon_lowered() end
@@ -191,52 +337,108 @@ function game.world2ui() end
 -- return a string includes all possible resolutions
 function game.get_resolutions()end
 -- (hand, item name, animation name, ?, speed)
+---@param number number
+---@param string string
+---@param string string
+---@param boolean boolean
+---@param number number
 function game.play_hud_motion(number, string, string, boolean, number)end
 function game.stop_hud_motion() end
 -- (section, name, speed) -- returns float
+---@param string string
+---@param string string
+---@param number number
 function game.get_motion_length(string, string, number)end
 -- returns boolean
 function game.hud_motion_allowed()end
 -- (name, u8 part, float speed, float power, bool bLooped, bool no_restart)
+---@param string string
+---@param number number
+---@param number number
+---@param number number
+---@param boolean boolean
+---@param boolean boolean
 function game.play_hud_anm(string, number, number, number, boolean, boolean)end
 -- (LPCSTR name, bool bForce)
+---@param string string
+---@param boolean boolean
 function game.stop_hud_anm(string, boolean)end
 -- (bool bForce)
+---@param boolean boolean
 function game.stop_all_hud_anms(boolean)end
 -- (LPCSTR name, float time) -- returns float
+---@param string string
+---@param number number
 function game.set_hud_anm_time(string, number)end
 --(bool b)
+---@param boolean boolean
 function game.only_allow_movekeys(boolean) end
 -- returns boolean
 function game.only_movekeys_allowed()end
 
 actor_stats = {}
+---@param string string
+---@param string string
+---@param string string
 function actor_stats.add_points_str(string, string, string) end
+---@param string string
 function actor_stats.get_points(string) end
+---@param string string
+---@param string string
+---@param number number
+---@param number number
 function actor_stats.add_points(string, string, number, number) end
 
 --// Rezy
 weather = {}
+---@param boolean boolean
 function weather.pause(boolean) end
 function weather.is_paused() end
+---@param string string
+---@param string string
 function weather.set_value_string(string, string) end
+---@param string string
 function weather.get_value_string(string) end
+---@param string string
+---@param number number
 function weather.set_value_numric(string, number) end
+---@param string string
 function weather.get_value_numric(string) end
+---@param string string
+---@param number number
+---@param number number
+---@param number number
+---@param number number
 function weather.set_value_vector(string, number, number, number, number) end
+---@param string string
 function weather.get_value_vector(string) end
+---@param string string
+---@param number number
 function weather.boost_value(string, number) end
 function weather.boost_reset() end
 function weather.reload() end
 
 hud_adjust = {}
+---@param boolean boolean
 function hud_adjust.enabled(boolean) end
+---@param string string
+---@param number number
 function hud_adjust.set_value(string, number) end
+---@param number number
+---@param number number
+---@param number number
+---@param number number
+---@param number number
 function hud_adjust.set_vector(number, number, number, number, number) end
+---@param string string
 function hud_adjust.remove_hud_model(string) end
 
 debug = {}
+---@param string string
+---@param number number
 function debug.traceback(string, number) end
+---@param number number
+---@param string string
 function debug.getinfo(number, string) end
 
 	
