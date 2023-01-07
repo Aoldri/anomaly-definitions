@@ -20,4 +20,6 @@ Add the path to the repo to `Lua › Workspace: Library` in the workspace settin
   ]
 }
 ```
+Set the `Lua › Runtime: Plugin` as the path to the `plugin.lua` file. For example: `$USERPROFILE/Documents/LuaEnvironments/anomaly-definitions/plugin.lua`
+
 More detailed instructions are found here in the LSP's [wiki](https://github.com/sumneko/lua-language-server/wiki/Libraries).
