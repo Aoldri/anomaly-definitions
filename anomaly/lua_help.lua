@@ -75,6 +75,7 @@ function bit_xor(number, number) end
 ---@param number number
 ---@param number number
 ---@param number number
+---@return number
 function GetARGB(number, number, number, number) end
 function GetFontSmall() end
 function GetFontMedium() end
@@ -310,6 +311,7 @@ function main_menu.get_main_menu() end
 
 game = {}
 ---@param string string
+---@return string
 function game.translate_string(string) end
 function game.time() end
 function game.get_game_time() end

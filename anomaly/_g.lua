@@ -82,6 +82,10 @@ function round(value) end
 function round_idp(num, idp) end
 function round_100(num) end
 function odd(x) end
+---@param val number
+---@param min number
+---@param max number
+---@return number
 function clamp(val, min, max) end
 function normalize(val, min, max) end
 function normalize_100(val, min, max) end
@@ -138,7 +142,7 @@ function parse_nums( s ) end
 function parse_func(sec, param, ...) end
 function starts_with(str, start_txt) end
 function has_translation(string_id) end
--- преобразует строку в соответствии со значением
+-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 function get_param_string(src_string, obj)  end
 function execute_func(file, func, ...) end
 function reset_action (npc, script_name) end
@@ -220,6 +224,7 @@ function empty_table(t) end
 ---@param t table
 function size_table(t) end
 ---@param t table
+---@return number|string|nil
 function random_key_table(t) end
 function copy_table(dest, src) end
 function dup_table(src) end
@@ -288,7 +293,7 @@ function alife_create(sec,pos,lid,gid,id,state) end
 -- 	item property table (except ammo) only works on online items, if an item is spawned somewhere outside of online radius then it won't be processed          
 ---@param section string
 ---@param obj game_object|cse_alife_object|table
----@param t table
+---@param t? table
 ---@return cse_alife_object
 function alife_create_item(section, obj, t) end
 
@@ -306,7 +311,7 @@ function alife_process_item(section, id, t) end
 function alife_release(se_obj, msg) end
 
 ---@param id number
----@param msg string
+---@param msg? string
 function alife_release_id(id, msg) end
 function alife_clone_weapon(se_obj, section, parent_id) end
 function alife_character_community(se_obj) end
@@ -326,12 +331,12 @@ function character_community(obj) end
 function get_actor_true_community()  end
 -- no "actor_"
 function set_actor_true_community(new_comm, now)  end
--- Получить сквад обьекта!!!!!
+-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!!!!!
 function get_object_squad(object,caller)  end
 function set_inactivate_input_time(delta) end
---' находится ли NPC во фруструме игрока
+--' пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ NPC пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 function npc_in_actor_frustrum(npc)  end
--- меняет team:squad:group обьекта.
+-- пїЅпїЅпїЅпїЅпїЅпїЅ team:squad:group пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 function change_team_squad_group(se_obj, team, squad, group)  end
 function get_speaker(safe, all) end
 function distance_between(obj1, obj2) end
@@ -497,10 +502,12 @@ function IsArtefact(o,c) end
 
 ---@param typ string
 ---@param sec string
----@param obj game_object
+---@param obj? game_object
 ---@return boolean
 function IsItem(typ, sec, obj) end
 
+---@param typ string
+---@return table
 function GetItemList(typ) end
 function Parse_ITM() end
 function add_console_command(name, f) end
