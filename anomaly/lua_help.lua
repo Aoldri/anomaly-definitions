@@ -443,7 +443,7 @@ function debug.traceback(string, number) end
 ---@param string string
 function debug.getinfo(number, string) end
 
-	
+
 
 ---@class entity_memory_object:memory_object 
 ---@field last_level_time any
@@ -453,7 +453,7 @@ function debug.getinfo(number, string) end
 entity_memory_object = {}
 ---@param entity_memory_object entity_memory_object
 function entity_memory_object:object( entity_memory_object) end
-	
+
 
 
 ---@class game_memory_object:memory_object 
@@ -464,7 +464,7 @@ function entity_memory_object:object( entity_memory_object) end
 game_memory_object = {}
 ---@param game_memory_object game_memory_object
 function game_memory_object:object( game_memory_object) end
-	
+
 
 
 ---@class fcolor
@@ -482,8 +482,8 @@ function fcolor:set( fcolor) end
 ---@param number number
 ---@return fcolor
 function fcolor:set(number) end
-	
-	
+
+
 
 
 ---@class flags16
@@ -513,7 +513,7 @@ function flags16:invert( flags16) end
 ---@param number number
 function flags16:invert(number) end
 function flags16:get()  end
-	
+
 
 
 ---@class flags32
@@ -542,7 +542,7 @@ function flags32:invert( flags32) end
 ---@param number number
 function flags32:invert(number) end
 function flags32:get()  end
-	
+
 
 
 ---@class matrix
@@ -574,8 +574,8 @@ function matrix:mul( matrix, number) end
 ---@param number number
 function matrix:mul(number) end
 function matrix:setXYZi(number, number, number) end
-	
-	
+
+
 
 
 ---@class Frect
@@ -589,8 +589,8 @@ function matrix:setXYZi(number, number, number) end
 Frect = {}
 ---@return Frect
 function Frect:set(number, number, number, number) end
-	
-	
+
+
 
 
 ---@class vector2
@@ -603,8 +603,8 @@ function vector2:set(number, number) end
 ---@param vector2 vector2
 ---@return vector2
 function vector2:set( vector2) end
-	
-	
+
+
 
 
 ---@class vector
@@ -690,8 +690,8 @@ function vector:add(number) end
 function vector:add( vector) end
 function vector:add( vector,  vector) end
 function vector:add( vector, number) end
-	
-	
+
+
 
 
 ---@class spawn_story_ids
@@ -969,7 +969,7 @@ best_scores_pair_t = {}
 hit_memory_object = {}
 ---@param entity_memory_object entity_memory_object
 function hit_memory_object:object( entity_memory_object) end
-	
+
 
 
 ---@class clsid
@@ -1216,7 +1216,7 @@ clsid.zone = 228
 memory_info = {}
 ---@param game_memory_object game_memory_object
 function memory_info:object( game_memory_object) end
-	
+
 
 
 ---@class MonsterSpace
@@ -1233,7 +1233,7 @@ MonsterSpace.sound_script = 128
 not_yet_visible_object = {}
 ---@param not_yet_visible_object not_yet_visible_object
 function not_yet_visible_object:object( not_yet_visible_object) end
-	
+
 
 
 ---@class CSightParams
@@ -1255,8 +1255,8 @@ CSightParams.eSightTypeObject = 4
 CSightParams.eSightTypePathDirection = 1
 CSightParams.eSightTypePosition = 3
 CSightParams.eSightTypeSearch = 6
-	
-	
+
+
 
 
 ---@class sound_memory_object:game_memory_object 
@@ -1269,7 +1269,7 @@ sound_memory_object = {}
 ---@param game_memory_object game_memory_object
 function sound_memory_object:object( game_memory_object) end
 function sound_memory_object:type()  end
-	
+
 
 
 ---@class visible_memory_object:game_memory_object 
@@ -1280,7 +1280,7 @@ function sound_memory_object:type()  end
 visible_memory_object = {}
 ---@param game_memory_object game_memory_object
 function visible_memory_object:object( game_memory_object) end
-	
+
 
 
 ---@class FS_item
@@ -1309,15 +1309,15 @@ function Patch_Dawnload_Progress:GetFlieName() end
 color = {}
 ---@return color
 function color:set(number, number, number) end
-	
-	
+
+
 
 
 ---@class SDrawStaticStruct
 ---@field m_endTime any
 SDrawStaticStruct = {}
 function wnd() end
-	
+
 
 
 ---@class duality
@@ -1328,8 +1328,8 @@ function wnd() end
 duality = {}
 ---@return duality
 function duality:set(number, number) end
-	
-	
+
+
 
 
 ---@class memory_object
@@ -1347,8 +1347,8 @@ memory_object = {}
 noise = {}
 ---@return noise
 function noise:set(number, number, number) end
-	
-	
+
+
 
 
 ---@class object_params
@@ -1368,8 +1368,8 @@ object_params = {}
 ---@overload fun(): effector_params
 effector_params = {}
 function effector_params:assign(effector_params, effector_params) end
-	
-	
+
+
 
 
 ---@class rotation
@@ -1530,7 +1530,7 @@ function color_animator:calculate(number) end
 ---@param string string
 function color_animator:load(string) end
 function color_animator:length() end
-	
+
 
 
 ---@class profile
@@ -1548,7 +1548,7 @@ function profile_timer:start() end
 function profile_timer:time()  end
 ---@param profile_timer profile_timer
 function profile_timer:__tostring(profile_timer) end
-	
+
 
 
 ---@class token
@@ -1556,7 +1556,7 @@ function profile_timer:__tostring(profile_timer) end
 ---@field name any
 ---@overload fun(): token
 token = {}
-	
+
 
 
 ---@class action_base
@@ -1582,8 +1582,8 @@ function action_base:show(string) end
 function action_base:initialize() end
 ---@param number number
 function action_base:remove_effect( number) end
-	
-	
+
+
 
 
 ---@class action_planner
@@ -1660,7 +1660,7 @@ function planner_action:setup(game_object, property_storage) end
 ---@param number number
 function planner_action:remove_evaluator( number) end
 function planner_action:add_evaluator( number, property_evaluator) end
-	
+
 
 
 ---@class world_state
@@ -1676,7 +1676,7 @@ function world_state:remove_property( number) end
 function world_state:add_property( world_property) end
 ---@param number number
 function world_state:property( number)  end
-	
+
 
 
 ---@class world_property
@@ -1684,7 +1684,7 @@ function world_state:property( number)  end
 world_property = {}
 function world_property:value()  end
 function world_property:condition()  end
-	
+
 
 
 ---@class property_evaluator
@@ -1696,7 +1696,7 @@ function world_property:condition()  end
 property_evaluator = {}
 function property_evaluator:evaluate() end
 function property_evaluator:setup(game_object, property_storage) end
-	
+
 
 
 ---@class property_evaluator_:property_evaluator 
@@ -1706,7 +1706,7 @@ function property_evaluator:setup(game_object, property_storage) end
 property_evaluator_ = {}
 function property_evaluator_:evaluate() end
 function property_evaluator_:setup(game_object, property_storage) end
-	
+
 
 
 ---@class ipure_alife_load_object
@@ -1734,7 +1734,7 @@ Fbox = {}
 suggest_nicks_cb = {}
 function suggest_nicks_cb:bind(object, functor) end
 function suggest_nicks_cb:clear() end
-	
+
 
 
 ---@class account_profiles_cb
@@ -1753,7 +1753,7 @@ function account_profiles_cb:clear() end
 login_operation_cb = {}
 function login_operation_cb:bind(object, functor) end
 function login_operation_cb:clear() end
-	
+
 
 
 ---@class account_operation_cb
@@ -1762,7 +1762,7 @@ function login_operation_cb:clear() end
 account_operation_cb = {}
 function account_operation_cb:bind(object, functor) end
 function account_operation_cb:clear() end
-	
+
 
 
 ---@class found_email_cb
@@ -1771,7 +1771,7 @@ function account_operation_cb:clear() end
 found_email_cb = {}
 function found_email_cb:bind(object, functor) end
 function found_email_cb:clear() end
-	
+
 
 
 ---@class store_operation_cb
@@ -1799,7 +1799,7 @@ function CAI_Bloodsucker:net_Export(net_packet) end
 function CAI_Bloodsucker:_ruct() end
 ---@param CGameObject CGameObject
 function CAI_Bloodsucker:use(CGameObject) end
-	
+
 
 
 ---@class CAI_Boar:CGameObject 
@@ -1817,7 +1817,7 @@ function CAI_Boar:getVisible()  end
 function CAI_Boar:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CAI_Boar:use(CGameObject) end
-	
+
 
 
 ---@class CAI_Dog:CGameObject 
@@ -1835,7 +1835,7 @@ function CAI_Dog:getVisible()  end
 function CAI_Dog:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CAI_Dog:use(CGameObject) end
-	
+
 
 
 ---@class CAI_Flesh:CGameObject 
@@ -1853,7 +1853,7 @@ function CAI_Flesh:getVisible()  end
 function CAI_Flesh:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CAI_Flesh:use(CGameObject) end
-	
+
 
 
 ---@class CAI_PseudoDog:CGameObject 
@@ -1871,7 +1871,7 @@ function CAI_PseudoDog:getVisible()  end
 function CAI_PseudoDog:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CAI_PseudoDog:use(CGameObject) end
-	
+
 
 
 ---@class CAI_Stalker:CGameObject 
@@ -1889,7 +1889,7 @@ function CAI_Stalker:getVisible()  end
 function CAI_Stalker:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CAI_Stalker:use(CGameObject) end
-	
+
 
 
 ---@class CAI_Trader:CGameObject 
@@ -1907,7 +1907,7 @@ function CAI_Trader:getVisible()  end
 function CAI_Trader:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CAI_Trader:use(CGameObject) end
-	
+
 
 
 ---@class CALifeHumanBrain:CALifeMonsterBrain 
@@ -2027,7 +2027,7 @@ CALifeSmartTerrainTask = {}
 function CALifeSmartTerrainTask:level_vertex_id()  end
 function CALifeSmartTerrainTask:position()  end
 function CALifeSmartTerrainTask:game_vertex_id()  end
-	
+
 
 
 ---@class CActor:CGameObject 
@@ -2049,7 +2049,7 @@ function CActor:conditions() end
 function CActor:inventory_disabled() end
 ---@param boolean boolean
 function CActor:set_inventory_disabled(boolean) end
-	
+
 
 
 ---@class CActorCondition:CEntityCondition 
@@ -2180,7 +2180,7 @@ function CAntirad:getVisible()  end
 function CAntirad:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CAntirad:use(CGameObject) end
-	
+
 
 
 ---@class CArtefact:CGameObject 
@@ -2211,8 +2211,8 @@ function CArtefact:CanBeActivated() end
 function CArtefact:AdditionalInventoryWeight() end
 ---@param CGameObject CGameObject
 function CArtefact:use(CGameObject) end
-	
-	
+
+
 
 
 ---@class CBastArtefact:CArtefact 
@@ -2234,7 +2234,7 @@ function CBastArtefact:net_Export(net_packet) end
 function CBastArtefact:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CBastArtefact:use(CGameObject) end
-	
+
 
 
 ---@class CBlackDrops:CArtefact 
@@ -2256,7 +2256,7 @@ function CBlackDrops:net_Export(net_packet) end
 function CBlackDrops:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CBlackDrops:use(CGameObject) end
-	
+
 
 
 ---@class CBlackGraviArtefact:CArtefact 
@@ -2278,7 +2278,7 @@ function CBlackGraviArtefact:net_Export(net_packet) end
 function CBlackGraviArtefact:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CBlackGraviArtefact:use(CGameObject) end
-	
+
 
 
 ---@class CBlend
@@ -2301,7 +2301,7 @@ function CBottleItem:net_Spawn(cse_abstract) end
 function CBottleItem:BreakToPieces() end
 ---@param CGameObject CGameObject
 function CBottleItem:use(CGameObject) end
-	
+
 
 
 ---@class CBurer:CGameObject 
@@ -2319,7 +2319,7 @@ function CBurer:getVisible()  end
 function CBurer:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CBurer:use(CGameObject) end
-	
+
 
 
 ---@class CCar:CGameObject,holder 
@@ -2382,8 +2382,8 @@ function CCar:ReleaseHandBreak() end
 function CCar:GetRPM() end
 ---@param number number
 function CCar:SetRPM(number) end
-	
-	
+
+
 
 
 ---@class CCat:CGameObject 
@@ -2401,7 +2401,7 @@ function CCat:getVisible()  end
 function CCat:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CCat:use(CGameObject) end
-	
+
 
 
 ---@class CChimera:CGameObject 
@@ -2419,7 +2419,7 @@ function CChimera:getVisible()  end
 function CChimera:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CChimera:use(CGameObject) end
-	
+
 
 
 ---@class client_spawn_manager
@@ -2462,7 +2462,7 @@ function CController:getVisible()  end
 function CController:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CController:use(CGameObject) end
-	
+
 
 
 ---@class CCustomOutfit:CGameObject 
@@ -2538,7 +2538,7 @@ function danger_object:dependent_object( danger_object) end
 ---@class CDestroyablePhysicsObject:CGameObject 
 ---@overload fun(): CDestroyablePhysicsObject
 CDestroyablePhysicsObject = {}
-	
+
 function CDestroyablePhysicsObject:Visual()  end
 function CDestroyablePhysicsObject:_ruct() end
 function CDestroyablePhysicsObject:getEnabled()  end
@@ -2598,7 +2598,7 @@ function CDummyArtefact:net_Export(net_packet) end
 function CDummyArtefact:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CDummyArtefact:use(CGameObject) end
-	
+
 
 
 ---@class cef_storage
@@ -2674,7 +2674,7 @@ function CElectricBall:net_Export(net_packet) end
 function CElectricBall:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CElectricBall:use(CGameObject) end
-	
+
 
 
 ---@class explosive
@@ -2697,7 +2697,7 @@ function CExplosiveItem:getVisible()  end
 function CExplosiveItem:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CExplosiveItem:use(CGameObject) end
-	
+
 
 
 ---@class CF1:CGameObject 
@@ -2715,7 +2715,7 @@ function CF1:getVisible()  end
 function CF1:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CF1:use(CGameObject) end
-	
+
 
 
 ---@class CFadedBall:CArtefact 
@@ -2737,7 +2737,7 @@ function CFadedBall:net_Export(net_packet) end
 function CFadedBall:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CFadedBall:use(CGameObject) end
-	
+
 
 
 ---@class CFoodItem:CGameObject 
@@ -2755,7 +2755,7 @@ function CFoodItem:getVisible()  end
 function CFoodItem:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CFoodItem:use(CGameObject) end
-	
+
 
 
 ---@class CFracture:CGameObject 
@@ -2773,7 +2773,7 @@ function CFracture:getVisible()  end
 function CFracture:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CFracture:use(CGameObject) end
-	
+
 
 
 ---@class CGalantineArtefact:CArtefact 
@@ -2795,7 +2795,7 @@ function CGalantineArtefact:net_Export(net_packet) end
 function CGalantineArtefact:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CGalantineArtefact:use(CGameObject) end
-	
+
 
 
 ---@class CGameFont
@@ -2834,7 +2834,7 @@ function CGameObject:net_Export(net_packet) end
 function CGameObject:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CGameObject:use(CGameObject) end
-	
+
 
 
 ---@class CGameTask
@@ -2880,7 +2880,7 @@ function CGameTask:change_map_location(string, number) end
 ---@param string string
 function CGameTask:add_on_complete_info(string) end
 function CGameTask:get_priority() end
-	
+
 
 
 ---@class CGraviArtefact:CArtefact 
@@ -2902,7 +2902,7 @@ function CGraviArtefact:net_Export(net_packet) end
 function CGraviArtefact:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CGraviArtefact:use(CGameObject) end
-	
+
 
 
 ---@class CGrenadeLauncher:CGameObject 
@@ -2920,7 +2920,7 @@ function CGrenadeLauncher:getVisible()  end
 function CGrenadeLauncher:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CGrenadeLauncher:use(CGameObject) end
-	
+
 
 
 ---@class CHairsZone:CGameObject 
@@ -2938,7 +2938,7 @@ function CHairsZone:getVisible()  end
 function CHairsZone:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CHairsZone:use(CGameObject) end
-	
+
 
 
 ---@class hanging_lamp:CGameObject 
@@ -2958,7 +2958,7 @@ function hanging_lamp:net_Export(net_packet) end
 function hanging_lamp:_ruct() end
 ---@param CGameObject CGameObject
 function hanging_lamp:use(CGameObject) end
-	
+
 
 
 ---@class CHelicopter:CGameObject
@@ -3050,9 +3050,9 @@ function CHelicopter:GetSafeAltitude() end
 function CHelicopter:ClearEnemy() end
 ---@param CGameObject CGameObject
 function CHelicopter:use(CGameObject) end
-	
 
-	
+
+
 
 
 ---@class CHelmet:CGameObject 
@@ -3113,7 +3113,7 @@ function CInventoryBox:set_closed(boolean, string) end
 ---@param CGameObject CGameObject
 function CInventoryBox:use(CGameObject) end
 function CInventoryBox:Visual()  end
-	
+
 
 
 ---@class CInventoryItem
@@ -3146,7 +3146,7 @@ function CInventoryOwner:deadbody_can_take_status() end
 function CInventoryOwner:deadbody_closed(boolean) end
 function CInventoryOwner:deadbody_closed_status() end
 
-	
+
 ---@class CLevelChanger:CGameObject 
 ---@overload fun(): CLevelChanger
 CLevelChanger = {}
@@ -3162,7 +3162,7 @@ function CLevelChanger:getVisible()  end
 function CLevelChanger:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CLevelChanger:use(CGameObject) end
-	
+
 
 
 ---@class FS
@@ -3177,7 +3177,7 @@ FS.FS_sort_by_name_down = 1
 FS.FS_sort_by_name_up = 0
 FS.FS_sort_by_size_down = 3
 FS.FS_sort_by_size_up = 2
-	
+
 ---@param string string
 function FS:get_file_age(string) end
 ---@param string string
@@ -3215,7 +3215,7 @@ function FS:w_open(string) end
 function FS:rescan_path(FS, string) end
 ---@param FS FS
 function FS:rescan_pathes(FS) end
-	
+
 
 
 ---@class CMainMenu
@@ -3248,7 +3248,7 @@ function CMedkit:getVisible()  end
 function CMedkit:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CMedkit:use(CGameObject) end
-	
+
 
 
 ---@class CMercuryBall:CArtefact 
@@ -3270,7 +3270,7 @@ function CMercuryBall:net_Export(net_packet) end
 function CMercuryBall:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CMercuryBall:use(CGameObject) end
-	
+
 
 
 ---@class CMincer:CGameObject 
@@ -3288,7 +3288,7 @@ function CMincer:getVisible()  end
 function CMincer:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CMincer:use(CGameObject) end
-	
+
 
 
 ---@class CMosquitoBald:CGameObject 
@@ -3306,7 +3306,7 @@ function CMosquitoBald:getVisible()  end
 function CMosquitoBald:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CMosquitoBald:use(CGameObject) end
-	
+
 
 
 ---@class object_factory
@@ -3354,8 +3354,8 @@ function patrol:terminal(number)  end
 function patrol:count()  end
 ---@param vector vector
 function patrol:get_nearest( vector)  end
-	
-	
+
+
 
 
 ---@class CPda:CGameObject 
@@ -3373,7 +3373,7 @@ function CPda:getVisible()  end
 function CPda:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CPda:use(CGameObject) end
-	
+
 
 
 ---@class CPhrase
@@ -3411,7 +3411,7 @@ function CPhysicObject:anim_time_set(number) end
 function CPhysicObject:stop_bones_sound() end
 ---@param CGameObject CGameObject
 function CPhysicObject:use(CGameObject) end
-	
+
 
 
 ---@class CPoltergeist:CGameObject 
@@ -3429,7 +3429,7 @@ function CPoltergeist:getVisible()  end
 function CPoltergeist:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CPoltergeist:use(CGameObject) end
-	
+
 
 
 ---@class property_storage
@@ -3455,7 +3455,7 @@ function CPseudoGigant:getVisible()  end
 function CPseudoGigant:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CPseudoGigant:use(CGameObject) end
-	
+
 
 
 ---@class CPsyDog:CGameObject 
@@ -3490,7 +3490,7 @@ function CPsyDogPhantom:getVisible()  end
 function CPsyDogPhantom:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CPsyDogPhantom:use(CGameObject) end
-	
+
 
 
 ---@class cpure_server_object:ipure_server_object 
@@ -3512,7 +3512,7 @@ function CRGD5:getVisible()  end
 function CRGD5:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CRGD5:use(CGameObject) end
-	
+
 
 
 ---@class CRadioactiveZone:CGameObject 
@@ -3530,7 +3530,7 @@ function CRadioactiveZone:getVisible()  end
 function CRadioactiveZone:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CRadioactiveZone:use(CGameObject) end
-	
+
 
 
 ---@class render_device
@@ -3552,7 +3552,7 @@ function render_device:time_global( render_device) end
 ---@param render_device render_device
 function render_device:is_paused(render_device) end
 function render_device:pause(render_device, boolean) end
-	
+
 
 
 ---@class CRustyHairArtefact:CArtefact 
@@ -3574,7 +3574,7 @@ function CRustyHairArtefact:net_Export(net_packet) end
 function CRustyHairArtefact:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CRustyHairArtefact:use(CGameObject) end
-	
+
 
 
 ---@class cse_anomalous_zone:cse_custom_zone 
@@ -3628,8 +3628,8 @@ function cse_anomalous_zone:UPDATE_Write(net_packet) end
 function cse_anomalous_zone:on_unregister() end
 ---@param net_packet net_packet
 function cse_anomalous_zone:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_car:cse_alife_dynamic_object_visual,cse_ph_skeleton 
@@ -3683,8 +3683,8 @@ function cse_alife_car:UPDATE_Write(net_packet) end
 function cse_alife_car:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_car:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_creature_abstract:cse_alife_dynamic_object_visual 
@@ -3750,8 +3750,8 @@ function cse_alife_creature_abstract:UPDATE_Write(net_packet) end
 function cse_alife_creature_abstract:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_creature_abstract:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_creature_actor:cse_alife_creature_abstract,cse_alife_trader_abstract,cse_ph_skeleton 
@@ -3822,8 +3822,8 @@ function cse_alife_creature_actor:on_spawn() end
 function cse_alife_creature_actor:UPDATE_Write(net_packet) end
 function cse_alife_creature_actor:g_group() end
 function cse_alife_creature_actor:rank() end
-	
-	
+
+
 
 
 ---@class cse_alife_creature_crow:cse_alife_creature_abstract 
@@ -3889,8 +3889,8 @@ function cse_alife_creature_crow:keep_saved_data_anyway()  end
 function cse_alife_creature_crow:UPDATE_Write(net_packet) end
 function cse_alife_creature_crow:g_group() end
 function cse_alife_creature_crow:health()  end
-	
-	
+
+
 
 
 ---@class cse_alife_creature_phantom:cse_alife_creature_abstract 
@@ -3956,8 +3956,8 @@ function cse_alife_creature_phantom:keep_saved_data_anyway()  end
 function cse_alife_creature_phantom:UPDATE_Write(net_packet) end
 function cse_alife_creature_phantom:g_group() end
 function cse_alife_creature_phantom:health()  end
-	
-	
+
+
 
 
 ---@class cse_custom_zone:cse_alife_dynamic_object,cse_shape 
@@ -4011,8 +4011,8 @@ function cse_custom_zone:keep_saved_data_anyway()  end
 function cse_custom_zone:UPDATE_Write(net_packet) end
 function cse_custom_zone:on_unregister() end
 function cse_custom_zone:can_save()  end
-	
-	
+
+
 
 
 ---@class cse_alife_dynamic_object:cse_alife_object 
@@ -4066,8 +4066,8 @@ function cse_alife_dynamic_object:UPDATE_Write(net_packet) end
 function cse_alife_dynamic_object:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_dynamic_object:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_dynamic_object_visual:cse_alife_dynamic_object,cse_visual 
@@ -4121,8 +4121,8 @@ function cse_alife_dynamic_object_visual:keep_saved_data_anyway()  end
 function cse_alife_dynamic_object_visual:UPDATE_Write(net_packet) end
 function cse_alife_dynamic_object_visual:on_unregister() end
 function cse_alife_dynamic_object_visual:can_save()  end
-	
-	
+
+
 
 
 ---@class cse_alife_graph_point:cse_abstract 
@@ -4148,8 +4148,8 @@ function cse_alife_graph_point:name( cse_abstract) end
 ---@param net_packet net_packet
 function cse_alife_graph_point:UPDATE_Write(net_packet) end
 function cse_alife_graph_point:clsid()  end
-	
-	
+
+
 
 
 ---@class cse_alife_group_abstract
@@ -4207,8 +4207,8 @@ function cse_alife_helicopter:UPDATE_Write(net_packet) end
 function cse_alife_helicopter:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_helicopter:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_human_abstract:cse_alife_trader_abstract,cse_alife_monster_abstract 
@@ -4305,8 +4305,8 @@ function cse_alife_human_abstract:smart_terrain_task_activate(cse_alife_monster_
 function cse_alife_human_abstract:UPDATE_Write(net_packet) end
 function cse_alife_human_abstract:on_unregister() end
 function cse_alife_human_abstract:rank() end
-	
-	
+
+
 
 
 ---@class cse_alife_human_stalker:cse_alife_human_abstract,cse_ph_skeleton 
@@ -4403,8 +4403,8 @@ function cse_alife_human_stalker:on_spawn() end
 function cse_alife_human_stalker:UPDATE_Write(net_packet) end
 function cse_alife_human_stalker:g_group() end
 function cse_alife_human_stalker:rank() end
-	
-	
+
+
 
 
 ---@class cse_alife_inventory_box:cse_alife_dynamic_object_visual 
@@ -4458,7 +4458,7 @@ function cse_alife_inventory_box:UPDATE_Write(net_packet) end
 function cse_alife_inventory_box:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_inventory_box:UPDATE_Read(net_packet) end
-	
+
 
 
 ---@class cse_alife_inventory_item 
@@ -4517,7 +4517,7 @@ function cse_alife_item:UPDATE_Write(net_packet) end
 function cse_alife_item:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_item:UPDATE_Read(net_packet) end
-	
+
 
 
 ---@class cse_alife_item_ammo:cse_alife_item 
@@ -4572,8 +4572,8 @@ function cse_alife_item_ammo:on_unregister() end
 function cse_alife_item_ammo:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_ammo:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_artefact:cse_alife_item 
@@ -4628,8 +4628,8 @@ function cse_alife_item_artefact:on_unregister() end
 function cse_alife_item_artefact:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_artefact:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_bolt:cse_alife_item 
@@ -4684,8 +4684,8 @@ function cse_alife_item_bolt:on_unregister() end
 function cse_alife_item_bolt:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_bolt:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_custom_outfit:cse_alife_item 
@@ -4740,8 +4740,8 @@ function cse_alife_item_custom_outfit:on_unregister() end
 function cse_alife_item_custom_outfit:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_custom_outfit:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_detector:cse_alife_item 
@@ -4796,8 +4796,8 @@ function cse_alife_item_detector:on_unregister() end
 function cse_alife_item_detector:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_detector:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_document:cse_alife_item 
@@ -4852,8 +4852,8 @@ function cse_alife_item_document:on_unregister() end
 function cse_alife_item_document:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_document:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_explosive:cse_alife_item 
@@ -4908,8 +4908,8 @@ function cse_alife_item_explosive:on_unregister() end
 function cse_alife_item_explosive:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_explosive:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_grenade:cse_alife_item 
@@ -4964,8 +4964,8 @@ function cse_alife_item_grenade:on_unregister() end
 function cse_alife_item_grenade:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_grenade:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_pda:cse_alife_item 
@@ -5020,8 +5020,8 @@ function cse_alife_item_pda:on_unregister() end
 function cse_alife_item_pda:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_pda:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_torch:cse_alife_item 
@@ -5076,8 +5076,8 @@ function cse_alife_item_torch:on_unregister() end
 function cse_alife_item_torch:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_torch:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_weapon:cse_alife_item 
@@ -5134,8 +5134,8 @@ function cse_alife_item_weapon:on_unregister() end
 function cse_alife_item_weapon:move_offline()  end
 ---@param boolean boolean
 function cse_alife_item_weapon:move_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_weapon_auto_shotgun:cse_alife_item_weapon 
@@ -5192,8 +5192,8 @@ function cse_alife_item_weapon_auto_shotgun:can_switch_offline(boolean) end
 function cse_alife_item_weapon_auto_shotgun:UPDATE_Write(net_packet) end
 function cse_alife_item_weapon_auto_shotgun:on_unregister() end
 function cse_alife_item_weapon_auto_shotgun:on_register() end
-	
-	
+
+
 
 
 ---@class cse_alife_item_weapon_magazined:cse_alife_item_weapon 
@@ -5250,8 +5250,8 @@ function cse_alife_item_weapon_magazined:can_switch_offline(boolean) end
 function cse_alife_item_weapon_magazined:UPDATE_Write(net_packet) end
 function cse_alife_item_weapon_magazined:on_unregister() end
 function cse_alife_item_weapon_magazined:on_register() end
-	
-	
+
+
 
 
 ---@class cse_alife_item_weapon_magazined_w_gl:cse_alife_item_weapon_magazined 
@@ -5308,8 +5308,8 @@ function cse_alife_item_weapon_magazined_w_gl:UPDATE_Write(net_packet) end
 function cse_alife_item_weapon_magazined_w_gl:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_item_weapon_magazined_w_gl:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_item_weapon_shotgun:cse_alife_item_weapon 
@@ -5366,8 +5366,8 @@ function cse_alife_item_weapon_shotgun:can_switch_offline(boolean) end
 function cse_alife_item_weapon_shotgun:UPDATE_Write(net_packet) end
 function cse_alife_item_weapon_shotgun:on_unregister() end
 function cse_alife_item_weapon_shotgun:on_register() end
-	
-	
+
+
 
 
 ---@class cse_alife_level_changer:cse_alife_space_restrictor 
@@ -5421,8 +5421,8 @@ function cse_alife_level_changer:UPDATE_Write(net_packet) end
 function cse_alife_level_changer:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_level_changer:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_monster_abstract:cse_alife_creature_abstract,cse_alife_schedulable 
@@ -5511,7 +5511,7 @@ function cse_alife_monster_abstract:on_spawn() end
 function cse_alife_monster_abstract:UPDATE_Write(net_packet) end
 function cse_alife_monster_abstract:g_group() end
 function cse_alife_monster_abstract:rank() end
-	
+
 
 
 
@@ -5601,8 +5601,8 @@ function cse_alife_monster_base:smart_terrain_task_activate(cse_alife_monster_ab
 function cse_alife_monster_base:UPDATE_Write(net_packet) end
 function cse_alife_monster_base:on_unregister() end
 function cse_alife_monster_base:rank() end
-	
-	
+
+
 
 
 ---@class cse_alife_monster_rat:cse_alife_monster_abstract,cse_alife_inventory_item 
@@ -5692,7 +5692,7 @@ function cse_alife_monster_rat:UPDATE_Write(net_packet) end
 function cse_alife_monster_rat:on_unregister() end
 function cse_alife_monster_rat:rank() end
 
-	
+
 
 
 ---@class cse_alife_monster_zombie:cse_alife_monster_abstract 
@@ -5781,7 +5781,7 @@ function cse_alife_monster_zombie:smart_terrain_task_activate(cse_alife_monster_
 function cse_alife_monster_zombie:UPDATE_Write(net_packet) end
 function cse_alife_monster_zombie:on_unregister() end
 function cse_alife_monster_zombie:rank() end
-	
+
 
 
 ---@class cse_alife_mounted_weapon:cse_alife_dynamic_object_visual 
@@ -5835,8 +5835,8 @@ function cse_alife_mounted_weapon:UPDATE_Write(net_packet) end
 function cse_alife_mounted_weapon:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_mounted_weapon:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_object:cse_abstract 
@@ -5883,8 +5883,8 @@ function cse_alife_object:move_offline()  end
 function cse_alife_object:move_offline(boolean) end
 ---@param cse_abstract cse_abstract
 function cse_alife_object:name( cse_abstract) end
-	
-	
+
+
 
 
 ---@class cse_alife_object_breakable:cse_alife_dynamic_object_visual 
@@ -5938,8 +5938,8 @@ function cse_alife_object_breakable:UPDATE_Write(net_packet) end
 function cse_alife_object_breakable:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_object_breakable:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_object_climable:cse_shape,cse_abstract 
@@ -5965,8 +5965,8 @@ function cse_alife_object_climable:name( cse_abstract) end
 ---@param net_packet net_packet
 function cse_alife_object_climable:UPDATE_Write(net_packet) end
 function cse_alife_object_climable:clsid()  end
-	
-	
+
+
 
 
 ---@class cse_alife_object_hanging_lamp:cse_alife_dynamic_object_visual,cse_ph_skeleton 
@@ -6020,8 +6020,8 @@ function cse_alife_object_hanging_lamp:UPDATE_Write(net_packet) end
 function cse_alife_object_hanging_lamp:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_object_hanging_lamp:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_object_physic:cse_alife_dynamic_object_visual,cse_ph_skeleton 
@@ -6075,8 +6075,8 @@ function cse_alife_object_physic:UPDATE_Write(net_packet) end
 function cse_alife_object_physic:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_object_physic:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_object_projector:cse_alife_dynamic_object_visual 
