@@ -1,14 +1,12 @@
 ---@meta
 
-function on_game_start() end
 function start_game_callback() end
 function RegisterScriptCallback(name, func_or_userdata) end
 function UnregisterScriptCallback(name, func_or_userdata) end
 
-----Call this from a script to create a new callback to functions that register for it with RegisterScriptCallback
-----Every time this function is executed it will callback to all registered members
-----If axr_main.script has a function by this name, it will automatically trigger it!
----comment
+---Call this from a script to create a new callback to functions that register for it with RegisterScriptCallback
+---Every time this function is executed it will callback to all registered members
+---If axr_main.script has a function by this name, it will automatically trigger it!
 ---@param name string
 ---@param ... any
 function SendScriptCallback(name, ...) end
@@ -29,15 +27,15 @@ function show_all_ui(show) end
 function show_indicators(state) end
 function main_hud_shown() end
 
--- Events must have a unique id. Such as object id or another identifier unique to the occasion.
---
--- Action id must be unique to the specific Event. This allows a single event to have many queued
--- actions waiting to happen.
---
--- Returning true will remove the queued action. Returning false will execute the action continuously.
---
--- This allows for events to wait for a specific occurrence, such as triggering after a certain amount of
--- time only when object is offline
+---Events must have a unique id. Such as object id or another identifier unique to the occasion.
+---
+---Action id must be unique to the specific Event. This allows a single event to have many queued
+---actions waiting to happen.
+---
+---Returning true will remove the queued action. Returning false will execute the action continuously.
+---
+---This allows for events to wait for a specific occurrence, such as triggering after a certain amount of
+---time only when object is offline
 ---@param ev_id any
 ---@param act_id any
 ---@param timer number
@@ -272,26 +270,26 @@ function alife_object(id) end
 ---@param state boolean Set false to spawn unregistered object
 function alife_create(sec, pos, lid, gid, id, state) end
 
--- - section: [string] (required)
--- 	- item section
--- 
--- - obj: [object/table] (required)
--- 	- owner of the item we want to spawn. can be a game or server object
--- 	- it can be a table {pos, lvl_id, game_id, id} for custom spawn in the Zone
--- 
--- - t: [table] (optional)
--- 	- item property table, can be used to process spawned item, like spawning multiuse item with specific uses for example.
--- 	- available keys:
--- 		- cond [num] = to apply custom condition on the item with condition bars
--- 		- uses [num] = to apply custom uses on the multi-use items
--- 		- ammo [num] = to apply custom ammo amount on the ammo boxes
--- 		
--- 		- cond_r [table] = same as cond, but it picks a random condition in specified range (if it has more than 2 keys, then it will pick up a value randomly)
--- 		- cond_ct [string] = specific item type that it accept different condition range (from cond_cr)
--- 		- cond_cr [table] = same as cond_r, but applies it to specified item type (by cond_ct)
--- 
--- NOTES:
--- 	item property table (except ammo) only works on online items, if an item is spawned somewhere outside of online radius then it won't be processed          
+---- section: [string] (required)
+---	- item section
+---
+---- obj: [object/table] (required)
+---	- owner of the item we want to spawn. can be a game or server object
+---	- it can be a table {pos, lvl_id, game_id, id} for custom spawn in the Zone
+---
+---- t: [table] (optional)
+---	- item property table, can be used to process spawned item, like spawning multiuse item with specific uses for example.
+---	- available keys:
+---		- cond [num] = to apply custom condition on the item with condition bars
+---		- uses [num] = to apply custom uses on the multi-use items
+---		- ammo [num] = to apply custom ammo amount on the ammo boxes
+---		
+---		- cond_r [table] = same as cond, but it picks a random condition in specified range (if it has more than 2 keys, then it will pick up a value randomly)
+---		- cond_ct [string] = specific item type that it accept different condition range (from cond_cr)
+---		- cond_cr [table] = same as cond_r, but applies it to specified item type (by cond_ct)
+---
+---NOTES:
+---	item property table (except ammo) only works on online items, if an item is spawned somewhere outside of online radius then it won't be processed          
 ---@param section string
 ---@param obj game_object|cse_alife_object|table
 ---@param t? table
@@ -299,9 +297,9 @@ function alife_create(sec, pos, lid, gid, id, state) end
 function alife_create_item(section, obj, t) end
 
 ---Apply condition/uses/ammo aount
--- - t.cond [num] = apply passed condition
--- - t.uses [num] = apply passed uses count
--- - t.ammo [num] = apply passed ammo count
+---- t.cond [num] = apply passed condition
+---- t.uses [num] = apply passed uses count
+---- t.ammo [num] = apply passed ammo count
 ---@param section string
 ---@param id number
 ---@param t table
@@ -335,7 +333,7 @@ function set_actor_true_community(new_comm, now)  end
 -- �������� ����� �������!!!!!
 function get_object_squad(object, caller)  end
 function set_inactivate_input_time(delta) end
---' ��������� �� NPC �� ��������� ������
+-- ��������� �� NPC �� ��������� ������
 function npc_in_actor_frustrum(npc)  end
 -- ������ team:squad:group �������.
 function change_team_squad_group(se_obj, team, squad, group)  end
