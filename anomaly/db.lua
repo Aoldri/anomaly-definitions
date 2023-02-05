@@ -39,7 +39,6 @@ function db.delete_enemy(obj) end
 function db.add_obj(obj) end
 function db.del_obj(obj) end
 
-
 function db.add_zone(zone) end
 function db.del_zone(zone) end
 
@@ -49,14 +48,11 @@ function db.del_anomaly(anomaly) end
 function db.add_actor(obj) end
 function db.del_actor() end
 
-
 function db.add_heli(obj) end
 function db.del_heli(obj) end
 
-
 function db.add_smart_terrain(obj) end
 function db.del_smart_terrain(obj) end
-
 
 function db.add_anim_obj(anim_obj, binder) end
 function del_anim_obj(anim_obj) end
