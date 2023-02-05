@@ -1,5 +1,8 @@
 ---@meta
 
+---@class ini_file
+ini_sys = nil
+
 function start_game_callback() end
 function RegisterScriptCallback(name,func_or_userdata) end
 function UnregisterScriptCallback(name,func_or_userdata) end

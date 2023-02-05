@@ -14,7 +14,11 @@ function cast_planner(action_base) end
 function IsGameTypeSingle() end
 function game_graph() end
 ---@param number number
+---@return key_bindings
 function dik_to_bind(number) end
+---@param bind key_bindings
+---@return DIK_keys
+function bind_to_dik(bind) end
 function render_get_dx_level() end
 ---@param ini_file ini_file
 ---@param string string
@@ -181,7 +185,6 @@ function level.high_cover_in_direction(number,  vector) end
 function level.spawn_phantom( vector) end
 ---@param number number
 ---@return game_object
----@param number number
 function level.object_by_id(number) end
 ---@param string string
 function level.debug_object(string) end
@@ -750,80 +753,80 @@ callback.zone_enter = 4
 callback.zone_exit = 5
 
 
----@class key_bindings
-key_bindings = {}
-key_bindings.kACCEL = 6
-key_bindings.kBACK = 9
-key_bindings.kBUY = 48
-key_bindings.kCAM_1 = 14
-key_bindings.kCAM_2 = 15
-key_bindings.kCAM_3 = 16
-key_bindings.kCAM_ZOOM_IN = 17
-key_bindings.kCAM_ZOOM_OUT = 18
-key_bindings.kCHAT = 42
-key_bindings.kCONSOLE = 46
-key_bindings.kCROUCH = 5
-key_bindings.kDOWN = 3
-key_bindings.kDROP = 39
-key_bindings.kFWD = 8
-key_bindings.kINVENTORY = 47
-key_bindings.kJUMP = 4
-key_bindings.kLEFT = 0
-key_bindings.kL_LOOKOUT = 12
-key_bindings.kL_STRAFE = 10
-key_bindings.kNIGHT_VISION = 20
-key_bindings.kQUIT = 45
-key_bindings.kRIGHT = 1
-key_bindings.kR_LOOKOUT = 13
-key_bindings.kR_STRAFE = 11
-key_bindings.kSCORES = 41
-key_bindings.kSCREENSHOT = 44
-key_bindings.kSKIN = 49
-key_bindings.kTEAM = 50
-key_bindings.kTORCH = 19
-key_bindings.kUP = 2
-key_bindings.kUSE = 40
-key_bindings.kWPN_1 = 22
-key_bindings.kWPN_2 = 23
-key_bindings.kWPN_3 = 24
-key_bindings.kWPN_4 = 25
-key_bindings.kWPN_5 = 26
-key_bindings.kWPN_6 = 27
-key_bindings.kWPN_FIRE = 30
-key_bindings.kWPN_FUNC = 35
-key_bindings.kWPN_NEXT = 29
-key_bindings.kWPN_RELOAD = 34
-key_bindings.kWPN_ZOOM = 31
-key_bindings.kWPN_FIREMODE_PREV = 36
-key_bindings.kWPN_FIREMODE_NEXT = 37
+---@enum key_bindings
+key_bindings = {
+	kACCEL = 6,
+	kBACK = 9,
+	kBUY = 48,
+	kCAM_1 = 14,
+	kCAM_2 = 15,
+	kCAM_3 = 16,
+	kCAM_ZOOM_IN = 17,
+	kCAM_ZOOM_OUT = 18,
+	kCHAT = 42,
+	kCONSOLE = 46,
+	kCROUCH = 5,
+	kDOWN = 3,
+	kDROP = 39,
+	kFWD = 8,
+	kINVENTORY = 47,
+	kJUMP = 4,
+	kLEFT = 0,
+	kL_LOOKOUT = 12,
+	kL_STRAFE = 10,
+	kNIGHT_VISION = 20,
+	kQUIT = 45,
+	kRIGHT = 1,
+	kR_LOOKOUT = 13,
+	kR_STRAFE = 11,
+	kSCORES = 41,
+	kSCREENSHOT = 44,
+	kSKIN = 49,
+	kTEAM = 50,
+	kTORCH = 19,
+	kUP = 2,
+	kUSE = 40,
+	kWPN_1 = 22,
+	kWPN_2 = 23,
+	kWPN_3 = 24,
+	kWPN_4 = 25,
+	kWPN_5 = 26,
+	kWPN_6 = 27,
+	kWPN_FIRE = 30,
+	kWPN_FUNC = 35,
+	kWPN_NEXT = 29,
+	kWPN_RELOAD = 34,
+	kWPN_ZOOM = 31,
+	kWPN_FIREMODE_PREV = 36,
+	kWPN_FIREMODE_NEXT = 37,
 	-- custom keybinds
-key_bindings.kCUSTOM1 = 67
-key_bindings.kCUSTOM2 = 68
-key_bindings.kCUSTOM3 = 69
-key_bindings.kCUSTOM4 = 70
-key_bindings.kCUSTOM5 = 71
-key_bindings.kCUSTOM6 = 72
-key_bindings.kCUSTOM7 = 73
-key_bindings.kCUSTOM8 = 74
-key_bindings.kCUSTOM9 = 75
-key_bindings.kCUSTOM10 = 76
-key_bindings.kCUSTOM11 = 77
-key_bindings.kCUSTOM12 = 78
-key_bindings.kCUSTOM13 = 79
-key_bindings.kCUSTOM14 = 80
-key_bindings.kCUSTOM15 = 81
-key_bindings.kCUSTOM16 = 82
-key_bindings.kCUSTOM17 = 83
-key_bindings.kCUSTOM18 = 84
-key_bindings.kCUSTOM19 = 85
-key_bindings.kCUSTOM20 = 86
-key_bindings.kCUSTOM21 = 87
-key_bindings.kCUSTOM22 = 88
-key_bindings.kCUSTOM23 = 89
-key_bindings.kCUSTOM24 = 90
-key_bindings.kCUSTOM25 = 91
-key_bindings.kCAM_AUTOAIM = 82
-
+	kCUSTOM1 = 67,
+	kCUSTOM2 = 68,
+	kCUSTOM3 = 69,
+	kCUSTOM4 = 70,
+	kCUSTOM5 = 71,
+	kCUSTOM6 = 72,
+	kCUSTOM7 = 73,
+	kCUSTOM8 = 74,
+	kCUSTOM9 = 75,
+	kCUSTOM10 = 76,
+	kCUSTOM11 = 77,
+	kCUSTOM12 = 78,
+	kCUSTOM13 = 79,
+	kCUSTOM14 = 80,
+	kCUSTOM15 = 81,
+	kCUSTOM16 = 82,
+	kCUSTOM17 = 83,
+	kCUSTOM18 = 84,
+	kCUSTOM19 = 85,
+	kCUSTOM20 = 86,
+	kCUSTOM21 = 87,
+	kCUSTOM22 = 88,
+	kCUSTOM23 = 89,
+	kCUSTOM24 = 90,
+	kCUSTOM25 = 91,
+	kCAM_AUTOAIM = 82,
+}
 
 ---@class GAME_TYPE
 GAME_TYPE = {}
@@ -902,37 +905,37 @@ task.storyline = 0
 task.task_dummy = 65535
 
 
----@class ui_events
-ui_events = {}
-ui_events.BUTTON_CLICKED = 17
-ui_events.BUTTON_DOWN = 18
-ui_events.CHECK_BUTTON_RESET = 21
-ui_events.CHECK_BUTTON_SET = 20
-ui_events.EDIT_TEXT_COMMIT = 71
-ui_events.LIST_ITEM_CLICKED = 35
-ui_events.LIST_ITEM_SELECT = 36
-ui_events.MESSAGE_BOX_CANCEL_CLICKED = 44
-ui_events.MESSAGE_BOX_COPY_CLICKED = 45
-ui_events.MESSAGE_BOX_NO_CLICKED = 43
-ui_events.MESSAGE_BOX_OK_CLICKED = 39
-ui_events.MESSAGE_BOX_QUIT_GAME_CLICKED = 42
-ui_events.MESSAGE_BOX_QUIT_WIN_CLICKED = 41
-ui_events.MESSAGE_BOX_YES_CLICKED = 40
-ui_events.PROPERTY_CLICKED = 38
-ui_events.RADIOBUTTON_SET = 22
-ui_events.SCROLLBAR_HSCROLL = 32
-ui_events.SCROLLBAR_VSCROLL = 31
-ui_events.SCROLLBOX_MOVE = 30
-ui_events.TAB_CHANGED = 19
-ui_events.WINDOW_KEY_PRESSED = 10
-ui_events.WINDOW_KEY_RELEASED = 11
-ui_events.WINDOW_LBUTTON_DB_CLICK = 9
-ui_events.WINDOW_LBUTTON_DOWN = 0
-ui_events.WINDOW_LBUTTON_UP = 3
-ui_events.WINDOW_MOUSE_MOVE = 6
-ui_events.WINDOW_RBUTTON_DOWN = 1
-ui_events.WINDOW_RBUTTON_UP = 4
-
+---@enum ui_events
+ui_events = {
+	BUTTON_CLICKED = 17,
+	BUTTON_DOWN = 18,
+	CHECK_BUTTON_RESET = 21,
+	CHECK_BUTTON_SET = 20,
+	EDIT_TEXT_COMMIT = 71,
+	LIST_ITEM_CLICKED = 35,
+	LIST_ITEM_SELECT = 36,
+	MESSAGE_BOX_CANCEL_CLICKED = 44,
+	MESSAGE_BOX_COPY_CLICKED = 45,
+	MESSAGE_BOX_NO_CLICKED = 43,
+	MESSAGE_BOX_OK_CLICKED = 39,
+	MESSAGE_BOX_QUIT_GAME_CLICKED = 42,
+	MESSAGE_BOX_QUIT_WIN_CLICKED = 41,
+	MESSAGE_BOX_YES_CLICKED = 40,
+	PROPERTY_CLICKED = 38,
+	RADIOBUTTON_SET = 22,
+	SCROLLBAR_HSCROLL = 32,
+	SCROLLBAR_VSCROLL = 31,
+	SCROLLBOX_MOVE = 30,
+	TAB_CHANGED = 19,
+	WINDOW_KEY_PRESSED = 10,
+	WINDOW_KEY_RELEASED = 11,
+	WINDOW_LBUTTON_DB_CLICK = 9,
+	WINDOW_LBUTTON_DOWN = 0,
+	WINDOW_LBUTTON_UP = 3,
+	WINDOW_MOUSE_MOVE = 6,
+	WINDOW_RBUTTON_DOWN = 1,
+	WINDOW_RBUTTON_UP = 4,
+}
 
 ---@class GameGraph__LEVEL_MAP__value_type
 ---@field id any
@@ -2953,6 +2956,10 @@ function hanging_lamp:getVisible()  end
 function hanging_lamp:net_Spawn(cse_abstract) end
 function hanging_lamp:turn_on() end
 function hanging_lamp:turn_off() end
+---@return boolean
+function hanging_lamp:is_on() end
+---@return boolean
+function hanging_lamp:is_flickering() end
 ---@param net_packet net_packet
 function hanging_lamp:net_Export(net_packet) end
 function hanging_lamp:_ruct() end
@@ -4051,8 +4058,7 @@ function cse_alife_dynamic_object:on_register() end
 function cse_alife_dynamic_object:on_before_register() end
 ---@param cse_abstract cse_abstract
 function cse_alife_dynamic_object:spawn_ini(cse_abstract) end
----@param cse_abstract cse_abstract
-function cse_alife_dynamic_object:section_name( cse_abstract) end
+function cse_alife_dynamic_object:section_name() end
 function cse_alife_dynamic_object:on_spawn() end
 function cse_alife_dynamic_object:STATE_Read(net_packet, number) end
 function cse_alife_dynamic_object:interactive()  end
@@ -5864,10 +5870,8 @@ function cse_alife_object:clsid()  end
 ---@param net_packet net_packet
 function cse_alife_object:STATE_Write(net_packet) end
 function cse_alife_object:init() end
----@param cse_abstract cse_abstract
-function cse_alife_object:spawn_ini(cse_abstract) end
----@param cse_abstract cse_abstract
-function cse_alife_object:section_name( cse_abstract) end
+function cse_alife_object:spawn_ini() end
+function cse_alife_object:section_name() end
 function cse_alife_object:STATE_Read(net_packet, number) end
 function cse_alife_object:interactive()  end
 function cse_alife_object:visible_for_map()  end

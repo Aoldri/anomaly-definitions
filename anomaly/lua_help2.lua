@@ -1279,6 +1279,7 @@ function game_object:lookout_min_time()  end
 function game_object:animation_count()  end
 function game_object:disable_inv_upgrade() end
 function game_object:memory_sound_objects()  end
+---@return hanging_lamp
 function game_object:get_hanging_lamp() end
 function game_object:get_force_anti_aim() end
 function game_object:enable_inv_upgrade() end
@@ -1387,6 +1388,8 @@ function game_object:set_trader_sound(string, string) end
 function game_object:aim_time(game_object, number) end
 ---@param game_object game_object
 function game_object:aim_time(game_object) end
+---Gives a positional vector pointing in the direction of game_object's orientation
+---@return vector
 function game_object:direction()  end
 function game_object:body_state()  end
 ---@param boolean boolean
@@ -1455,6 +1458,7 @@ function game_object:set_tip_text_default() end
 ---@param string string
 function game_object:set_tip_text(string) end
 function game_object:get_current_holder() end
+---@return physics_shell
 function game_object:get_physics_shell()  end
 ---@param vector vector
 function game_object:set_actor_position(vector) end
@@ -1719,6 +1723,22 @@ function game_object:cast_Antirad() end
 function game_object:cast_FoodItem() end
 function game_object:cast_BottleItem() end
 
+---Returns name of a bone by index in the `game_object`.
+---@param index? number
+---@param bHud? boolean set `true` if `game_object` is a hud item - defaults to false
+---@return string
+function game_object:bone_name(index, bHud) end
+
+---Returns angle vector of a bone in the `game_object`.
+---
+---Rotations are given in the order: Heading, Pitch, and Bank - that is, YXZ.
+---So the X and Y components should be swapped if you want to match `se_obj.angle`
+---
+---@param bone_name? string defaults to root bone if nil
+---@param bHud? boolean set `true` if `game_object` is a hud item - defaults to false
+---@return vector
+function game_object:bone_direction(bone_name, bHud) end
+
 
 ---@class hit
 ---@field direction any
@@ -1766,7 +1786,8 @@ function ini_file:r_u32(string, string) end
 function ini_file:r_string_wq(string, string) end
 function ini_file:r_string(string, string) end
 function ini_file:line_exist(string, string) end
-	
+---@param functor fun(section: string): boolean? -- return true to exit iteration early
+function ini_file:section_for_each(functor) end
 
 
 ---@class act
@@ -2614,6 +2635,7 @@ function CUIComboBox:GetText() end
 function CUIComboBox:GetTextOf(number) end
 ---@param number number
 function CUIComboBox:SetListLength(number) end
+---@return number id Index of the selected item in the list
 function CUIComboBox:CurrentID() end
 ---@param number number
 function CUIComboBox:GetTextOf(number) end
@@ -2622,8 +2644,6 @@ function CUIComboBox:SetCurrentOptValue() end
 function CUIComboBox:SetVertScroll(boolean) end
 ---@param number number
 function CUIComboBox:disable_id(number) end
----@param number number
-function CUIComboBox:SetCurrentID(number) end
 	
 
 
@@ -2671,7 +2691,11 @@ function CUIScriptWnd:_ruct() end
 
 function CUIScriptWnd:OnKeyboard(number, enum_EUIMessages) end
 function CUIScriptWnd:Update() end
-function CUIScriptWnd:AddCallback(string, number,  functor, object) end
+---@param callback_id string
+---@param event_type ui_events
+---@param functor function
+---@param object any
+function CUIScriptWnd:AddCallback(callback_id, event_type, functor, object) end
 function CUIScriptWnd:Dispatch(number, number) end
 function CUIScriptWnd:Register(CUIWindow, string) end
 
@@ -4229,7 +4253,8 @@ function physics_shell:block_breaking() end
 function physics_shell:get_joint_by_order(number) end
 ---@param number number
 function physics_shell:get_joint_by_bone_id(number) end
-
+function physics_shell:freeze() end
+function physics_shell:unfreeze() end
 
 ---@class physics_world
 physics_world = {}
