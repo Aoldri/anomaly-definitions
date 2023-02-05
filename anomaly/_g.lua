@@ -211,6 +211,7 @@ function reload_ini_sys() end
 ---@param sec string Section Name
 ---@param param string Parameter Name
 ---@param def any Default Value
+---@return string|boolean|number|nil
 function SYS_GetParam(typ, sec, param, def) end
 ---@param t table
 function is_empty(t) end
