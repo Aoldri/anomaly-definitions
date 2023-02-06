@@ -1,0 +1,13 @@
+{
+    "settings": {
+            "Lua.diagnostics.disable" : [
+                "lowercase-global"
+            ],
+            "Lua.runtime.version": "Lua 5.1",
+            "Lua.workspace.ignoreSubmodules": false
+        },
+    "files": [
+        ".*%.script"
+    ],
+    "name": "Stalker: Anomaly"
+}
