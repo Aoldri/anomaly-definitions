@@ -66,8 +66,8 @@ function cse_alife_online_offline_group:on_unregister() end
 function cse_alife_online_offline_group:can_switch_offline()  end
 ---@param boolean boolean
 function cse_alife_online_offline_group:can_switch_offline(boolean) end
-	
-	
+
+
 
 
 ---@class cse_alife_ph_skeleton_object:cse_alife_dynamic_object_visual,cse_ph_skeleton 
@@ -122,8 +122,8 @@ function cse_alife_ph_skeleton_object:UPDATE_Write(net_packet) end
 function cse_alife_ph_skeleton_object:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_ph_skeleton_object:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_psydog_phantom:cse_alife_monster_base 
@@ -214,7 +214,7 @@ function cse_alife_psydog_phantom:UPDATE_Write(net_packet) end
 function cse_alife_psydog_phantom:g_group() end
 function cse_alife_psydog_phantom:rank() end
 
-	
+
 
 
 ---@class cse_alife_schedulable : ipure_schedulable_object
@@ -283,8 +283,8 @@ function cse_alife_smart_zone:UPDATE_Write(net_packet) end
 function cse_alife_smart_zone:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_smart_zone:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_space_restrictor:cse_alife_dynamic_object,cse_shape 
@@ -340,7 +340,7 @@ function cse_alife_space_restrictor:UPDATE_Write(net_packet) end
 function cse_alife_space_restrictor:on_unregister() end
 function cse_alife_space_restrictor:can_save()  end
 
-	
+
 
 
 ---@class cse_alife_team_base_zone:cse_alife_space_restrictor 
@@ -395,8 +395,8 @@ function cse_alife_team_base_zone:UPDATE_Write(net_packet) end
 function cse_alife_team_base_zone:on_unregister() end
 ---@param net_packet net_packet
 function cse_alife_team_base_zone:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_torrid_zone:cse_custom_zone,cse_motion 
@@ -451,8 +451,8 @@ function cse_torrid_zone:UPDATE_Write(net_packet) end
 function cse_torrid_zone:on_unregister() end
 ---@param net_packet net_packet
 function cse_torrid_zone:UPDATE_Read(net_packet) end
-	
-	
+
+
 
 
 ---@class cse_alife_trader:cse_alife_dynamic_object_visual,cse_alife_trader_abstract 
@@ -512,8 +512,8 @@ function cse_alife_trader:can_switch_offline(boolean) end
 function cse_alife_trader:UPDATE_Write(net_packet) end
 function cse_alife_trader:on_unregister() end
 function cse_alife_trader:rank() end
-	
-	
+
+
 
 
 ---@class cse_alife_trader_abstract
@@ -578,8 +578,8 @@ function cse_zone_visual:keep_saved_data_anyway()  end
 function cse_zone_visual:UPDATE_Write(net_packet) end
 function cse_zone_visual:on_unregister() end
 function cse_zone_visual:switch_online() end
-	
-	
+
+
 
 
 ---@class cse_abstract:cpure_server_object 
@@ -604,7 +604,7 @@ function cse_abstract:clsid()  end
 function cse_abstract:spawn_ini(cse_abstract) end
 ---@param cse_abstract cse_abstract
 function cse_abstract:section_name( cse_abstract) end
-	
+
 
 
 ---@class CSE_AbstractVisual:cse_visual,cse_abstract 
@@ -632,8 +632,8 @@ function CSE_AbstractVisual:name( cse_abstract) end
 function CSE_AbstractVisual:UPDATE_Write(net_packet) end
 function CSE_AbstractVisual:getStartupAnimation() end
 function CSE_AbstractVisual:clsid()  end
-	
-	
+
+
 
 
 ---@class cse_motion
@@ -697,8 +697,8 @@ function cse_smart_cover:keep_saved_data_anyway()  end
 function cse_smart_cover:UPDATE_Write(net_packet) end
 function cse_smart_cover:on_unregister() end
 function cse_smart_cover:can_save()  end
-	
-	
+
+
 
 
 ---@class cse_spectator:cse_abstract 
@@ -725,8 +725,8 @@ function cse_spectator:name( cse_abstract) end
 ---@param net_packet net_packet
 function cse_spectator:UPDATE_Write(net_packet) end
 function cse_spectator:clsid()  end
-	
-	
+
+
 
 
 ---@class cse_temporary:cse_abstract 
@@ -753,8 +753,8 @@ function cse_temporary:name( cse_abstract) end
 ---@param net_packet net_packet
 function cse_temporary:UPDATE_Write(net_packet) end
 function cse_temporary:clsid()  end
-	
-	
+
+
 
 
 ---@class cse_visual
@@ -769,7 +769,7 @@ function CSavedGameWrapper:level_id()  end
 ---@param CSavedGameWrapper CSavedGameWrapper
 function CSavedGameWrapper:game_time( CSavedGameWrapper) end
 function CSavedGameWrapper:actor_health()  end
-	
+
 
 
 ---@class CScope:CGameObject 
@@ -788,7 +788,7 @@ function CScope:getVisible()  end
 function CScope:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CScope:use(CGameObject) end
-	
+
 
 
 ---@class cond
@@ -804,7 +804,7 @@ cond.move_end = 1
 cond.object_end = 32
 cond.sound_end = 8
 cond.time_end = 64
-	
+
 
 
 ---@class anim
@@ -833,8 +833,8 @@ function anim:completed() end
 function anim:type(enum_MonsterSpace__EMentalState) end
 ---@param string string
 function anim:anim(string) end
-	
-	
+
+
 
 
 ---@class object_binder
@@ -861,8 +861,8 @@ function object_binder:net_Relcase(game_object) end
 function object_binder:net_spawn(cse_alife_object) end
 ---@param net_packet net_packet
 function object_binder:net_import(net_packet) end
-	
-	
+
+
 
 
 ---@class effector
@@ -875,7 +875,7 @@ function effector:start(effector) end
 function effector:process(effector_params) end
 ---@param effector effector
 function effector:finish(effector) end
-	
+
 
 
 ---@class entity_action
@@ -908,7 +908,7 @@ function entity_action:time() end
 function entity_action:look()  end
 function entity_action:sound()  end
 function entity_action:anim()  end
-	
+
 
 
 ---@class game_object
@@ -919,7 +919,6 @@ function entity_action:anim()  end
 ---@field psy_health any
 ---@field radiation any
 game_object = {}
-
 game_object.action_type_count = 6
 game_object.alifeMovementTypeMask = 0
 game_object.alifeMovementTypeRandom = 1
@@ -944,7 +943,7 @@ game_object.relation_fight_help_monster = 4
 game_object.relation_kill = 0
 game_object.sound = 3
 game_object.watch = 1
-	
+
 -- All types
 function game_object:id()  end
 function game_object:position()  end
@@ -962,7 +961,7 @@ function game_object:dont_has_info(string) end
 function game_object:give_info_portion(string) end
 ---@param string string
 function game_object:disable_info_portion(string) end
-	
+
 -- Testing
 function game_object:is_entity_alive() end
 function game_object:is_inventory_item() end
@@ -1005,7 +1004,7 @@ function game_object:set_actor_run_coef(number) end
 function game_object:get_actor_runback_coef() end
 ---@param number number
 function game_object:set_actor_runback_coef(number) end
-	
+
 -- NPCs
 function game_object:rank() end
 ---@param game_object game_object
@@ -1606,14 +1605,14 @@ function game_object:target_mental_state()  end
 function game_object:set_manual_invisibility(boolean) end
 ---@param number number
 function game_object:action_by_index(number) end
-	
+
 -- Anomalies objects
 function game_object:get_anomaly_radius() end
 ---@param number number
 function game_object:set_anomaly_radius(number) end
 -- x,y,z
 function game_object:set_anomaly_position(number, number, number) end
-	
+
 -- Item objects
 function game_object:condition()  end
 ---@param number number
@@ -1697,7 +1696,7 @@ function game_object:psy_factor()  end
 ---@param boolean boolean
 function game_object:enable_torch(boolean) end
 function game_object:torch_enabled()  end
-	
+
 -- Class casting. obj:cast_CustomOutfit() allows you to access CCustomOutfit class methods if the object is an outfit
 	-- All classes and their methods are listed in this file
 function game_object:cast_Actor() end
@@ -1763,8 +1762,8 @@ hit.telepatic = 4
 hit.wound = 6
 ---@param string string
 function hit:bone(string) end
-	
-	
+
+
 
 
 ---@class ini_file
@@ -1789,7 +1788,6 @@ function ini_file:line_exist(string, string) end
 ---@param functor fun(section: string): boolean? -- return true to exit iteration early
 function ini_file:section_for_each(functor) end
 
-
 ---@class act
 ---@overload fun(): act
 -- act (enum_MonsterSpace__EScriptMonsterGlobalAction)
@@ -1800,7 +1798,7 @@ act.attack = 2
 act.eat = 1
 act.panic = 3
 act.rest = 0
-	
+
 
 
 ---@class MonsterHitInfo
@@ -1865,7 +1863,7 @@ move.walk = 0
 move.walk_bkwd = 1
 move.walk_fwd = 0
 move.walk_with_leader = 6
-	
+
 function move:completed() end
 ---@param enum_DetailPathManager__EDetailPathType enum_DetailPathManager__EDetailPathType
 function move:path(enum_DetailPathManager__EDetailPathType) end
@@ -1880,7 +1878,7 @@ function move:patrol(CPatrolPath, shared_str) end
 function move:object(game_object) end
 ---@param enum_MonsterSpace__EBodyState enum_MonsterSpace__EBodyState
 function move:body(enum_MonsterSpace__EBodyState) end
-	
+
 
 
 ---@class object
@@ -1912,7 +1910,7 @@ object.take = 23
 object.turn_off = 20
 object.turn_on = 19
 object.use = 18
-	
+
 function object:completed() end
 ---@param string string
 function object:object(string) end
@@ -1941,7 +1939,7 @@ function particle:set_bone(string) end
 function particle:set_angles( vector) end
 function particle:completed() end
 function particle:set_particle(string, boolean) end
-	
+
 
 
 ---@class particles_object
@@ -1963,7 +1961,7 @@ function particles_object:stop_path() end
 function particles_object:stop_deffered() end
 function particles_object:play() end
 function particles_object:playing()  end
-	
+
 
 
 ---@class rtoken_list
@@ -1978,7 +1976,7 @@ function rtoken_list:count() end
 function rtoken_list:get(number) end
 ---@param string string
 function rtoken_list:add(string) end
-	
+
 
 
 ---@class sound_object
@@ -1993,7 +1991,7 @@ sound_object = {}
 sound_object.looped = 1
 sound_object.s2d = 2
 sound_object.s3d = 0
-	
+
 ---@param vector vector
 function sound_object:set_position( vector) end
 function sound_object:stop_deffered() end
@@ -2011,8 +2009,8 @@ function sound_object:play(game_object) end
 function sound_object:play(game_object, number) end
 function sound_object:play(game_object, number, number) end
 function sound_object:playing()  end
-	
-	
+
+
 
 
 ---@class sound
@@ -2057,8 +2055,8 @@ function sound:set_angles( vector) end
 ---@param enum_ESoundTypes enum_ESoundTypes
 function sound:set_sound_type(enum_ESoundTypes) end
 function sound:completed() end
-	
-	
+
+
 
 
 ---@class SoundInfo
@@ -2083,7 +2081,7 @@ function token_list:name(number) end
 ---@param string string
 function token_list:id(string) end
 function token_list:add(string, number) end
-	
+
 
 
 ---@class look
@@ -2112,8 +2110,8 @@ function look:object(game_object) end
 function look:bone(string) end
 ---@param vector vector
 function look:direct( vector) end
-	
-	
+
+
 
 
 
@@ -2150,9 +2148,9 @@ function ScriptLight:set_position(vector) end
 function ScriptLight:set_direction(vector) end
 function ScriptLight:update() end
 
-	
-	
-	
+
+
+
 
 
 ---@class ScriptGlow
@@ -2169,8 +2167,8 @@ ScriptGlow = {}
 function ScriptGlow:set_position(vector) end
 ---@param vector vector
 function ScriptGlow:set_direction(vector) end
-	
-	
+
+
 
 ---@class CScriptXmlInit
 ---@overload fun(): CScriptXmlInit
@@ -2230,7 +2228,7 @@ function CScriptXmlInit:Init3tButton(string, CUIWindow) end
 function CScriptXmlInit:InitAnimStatic(string, CUIWindow) end
 ---@return CUIFrameWindow
 function CScriptXmlInit:InitFrame(string, CUIWindow) end
-	
+
 
 
 ---@class ce_script_zone:DLL_Pure 
@@ -2238,7 +2236,7 @@ function CScriptXmlInit:InitFrame(string, CUIWindow) end
 ce_script_zone = {}
 
 function ce_script_zone:_ruct() end
-	
+
 
 
 ---@class CServerList:CUIWindow 
@@ -2260,7 +2258,7 @@ function CServerList:ShowServerInfo() end
 
 function CServerList:RefreshQuick() end
 function CServerList:ConnectToSelected() end
-	
+
 
 
 ---@class CSilencer:CGameObject 
@@ -2279,7 +2277,7 @@ function CSilencer:getVisible()  end
 function CSilencer:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CSilencer:use(CGameObject) end
-	
+
 
 
 ---@class ce_smart_zone:DLL_Pure 
@@ -2287,7 +2285,7 @@ function CSilencer:use(CGameObject) end
 ce_smart_zone = {}
 
 function ce_smart_zone:_ruct() end
-	
+
 
 
 ---@class CSnork:CGameObject 
@@ -2306,7 +2304,7 @@ function CSnork:getVisible()  end
 function CSnork:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CSnork:use(CGameObject) end
-	
+
 
 
 ---@class sound_params
@@ -2335,7 +2333,7 @@ function CSpaceRestrictor:getVisible()  end
 function CSpaceRestrictor:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CSpaceRestrictor:use(CGameObject) end
-	
+
 
 
 ---@class CStalkerOutfit:CGameObject 
@@ -2354,7 +2352,7 @@ function CStalkerOutfit:getVisible()  end
 function CStalkerOutfit:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CStalkerOutfit:use(CGameObject) end
-	
+
 
 
 ---@class stalker_ids
@@ -2504,7 +2502,7 @@ function CThornArtefact:net_Export(net_packet) end
 function CThornArtefact:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CThornArtefact:use(CGameObject) end
-	
+
 
 
 ---@class CTorch:CGameObject 
@@ -2523,7 +2521,7 @@ function CTorch:getVisible()  end
 function CTorch:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CTorch:use(CGameObject) end
-	
+
 
 
 ---@class CTorridZone:CGameObject 
@@ -2542,7 +2540,7 @@ function CTorridZone:getVisible()  end
 function CTorridZone:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CTorridZone:use(CGameObject) end
-	
+
 
 
 ---@class CTushkano:CGameObject 
@@ -2561,7 +2559,7 @@ function CTushkano:getVisible()  end
 function CTushkano:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CTushkano:use(CGameObject) end
-	
+
 
 
 ---@class CUI3tButton:CUIButton 
@@ -2594,7 +2592,7 @@ function CUIButton:SetTextureRect(Frect) end
 ---@param string string
 function CUIButton:InitTexture(string) end
 function CUIButton:GetTextureRect() end
-	
+
 
 
 ---@class CUICheckButton:CUI3tButton 
@@ -2616,7 +2614,7 @@ function CUICheckButton:GetCheck() end
 function CUICheckButton:InitTexture(string) end
 ---@param CUIWindow CUIWindow
 function CUICheckButton:SetDependControl(CUIWindow) end
-	
+
 
 
 ---@class CUIComboBox:CUIWindow 
@@ -2644,8 +2642,8 @@ function CUIComboBox:SetCurrentOptValue() end
 function CUIComboBox:SetVertScroll(boolean) end
 ---@param number number
 function CUIComboBox:disable_id(number) end
-	
-
+---@param number number
+function CUIComboBox:SetCurrentID(number) end
 
 ---@class CUICustomEdit:CUIWindow 
 CUICustomEdit = {}
@@ -2705,7 +2703,7 @@ function CUIScriptWnd:GetHolder() end
 
 ---@param string string
 function CUIScriptWnd:Load(string) end
-	
+
 
 
 ---@class CUIEditBox:CUICustomEdit 
@@ -2724,7 +2722,7 @@ function CUIEditBox:CaptureFocus(boolean) end
 
 ---@param string string
 function CUIEditBox:InitTexture(string) end
-	
+
 
 
 ---@class CUIEditBoxEx:CUICustomEdit 
@@ -2743,7 +2741,7 @@ function CUIEditBoxEx:CaptureFocus(boolean) end
 
 ---@param string string
 function CUIEditBoxEx:InitTexture(string) end
-	
+
 
 
 ---@class CUIFrameLineWnd:CUIWindow 
@@ -2759,7 +2757,7 @@ function CUIFrameLineWnd:SetColor(number) end
 
 ---@param number number
 function CUIFrameLineWnd:SetWidth(number) end
-	
+
 
 
 ---@class CUIFrameWindow:CUIWindow 
@@ -2775,7 +2773,7 @@ function CUIFrameWindow:SetColor(number) end
 
 ---@param number number
 function CUIFrameWindow:SetWidth(number) end
-	
+
 
 
 ---@class CUIGameCustom
@@ -2851,7 +2849,7 @@ function CUIListBox:RemoveAll() end
 function CUIListBox:ShowSelectedItem(boolean) end
 ---@param number number
 function CUIListBox:GetItem(number) end
-	
+
 
 
 ---@class CUIListBoxItem:CUIFrameLineWnd 
@@ -2873,7 +2871,7 @@ function CUIListBoxItem:GetTextItem() end
 function CUIListBoxItem:SetWidth(number) end
 ---@param number number
 function CUIListBoxItem:SetColor(number) end
-	
+
 
 
 ---@class CUIListBoxItemMsgChain:CUIListBoxItem 
@@ -2895,7 +2893,7 @@ function CUIListBoxItemMsgChain:GetTextItem() end
 ---@param number number
 function CUIListBoxItemMsgChain:SetWidth(number) end
 
-	
+
 
 
 ---@class CUIMMShniaga:CUIWindow 
@@ -2912,7 +2910,7 @@ function CUIMMShniaga:SetPage(enum_CUIMMShniaga__enum_page_id, string, string) e
 ---@param boolean boolean
 function CUIMMShniaga:SetVisibleMagnifier(boolean) end
 
-	
+
 
 
 ---@class CUIMapInfo:CUIWindow 
@@ -2924,7 +2922,7 @@ function CUIMapInfo:InitMap(string, string) end
 
 function CUIMapInfo:Init(vector2, vector2) end
 
-	
+
 
 
 ---@class CUIMapList:CUIWindow 
@@ -2953,7 +2951,7 @@ function CUIMapList:SetMapPic(CUIStatic) end
 function CUIMapList:SetServerParams(string) end
 ---@param CUIComboBox CUIComboBox
 function CUIMapList:SetWeatherSelector(CUIComboBox) end
-	
+
 
 
 ---@class CUIMessageBox:CUIStatic 
@@ -2977,7 +2975,7 @@ function CUIMessageBox:SetTextureRect(Frect) end
 ---@param string string
 function CUIMessageBox:InitTexture(string) end
 function CUIMessageBox:GetTextureRect() end
-	
+
 
 
 ---@class CUIMessageBoxEx:CUIDialogWnd 
@@ -2997,7 +2995,7 @@ function CUIMessageBoxEx:GetHost() end
 function CUIMessageBoxEx:ShowDialog(boolean) end
 function CUIMessageBoxEx:GetHolder() end
 
-	
+
 
 
 ---@class COptionsManager
@@ -3017,7 +3015,7 @@ function COptionsManager:SaveValues(string) end
 function COptionsManager:SetCurrentValues(string) end
 function COptionsManager:NeedSystemRestart() end
 function COptionsManager:OptionsPostAccept() end
-	
+
 
 
 ---@class CUIProgressBar:CUIWindow 
@@ -3044,7 +3042,7 @@ function CUIProgressBar:SetMiddleColor(number) end
 ---@param number number
 function CUIProgressBar:SetMaxColor(number) end
 
-	
+
 
 
 ---@class CUIPropertiesBox:CUIFrameWindow 
@@ -3068,7 +3066,7 @@ function CUIPropertiesBox:SetWidth(number) end
 function CUIPropertiesBox:Show(number, number) end
 ---@param number number
 function CUIPropertiesBox:SetColor(number) end
-	
+
 
 
 ---@class CUIScrollView:CUIWindow 
@@ -3090,7 +3088,7 @@ function CUIScrollView:GetMinScrollPos() end
 
 function CUIScrollView:ScrollToEnd() end
 function CUIScrollView:Clear() end
-	
+
 
 
 ---@class CUISleepStatic:CUIStatic 
@@ -3108,7 +3106,7 @@ function CUISleepStatic:SetTextureRect(Frect) end
 ---@param string string
 function CUISleepStatic:InitTexture(string) end
 function CUISleepStatic:GetTextureRect() end
-	
+
 
 
 ---@class CUISpinFlt:CUICustomSpin 
@@ -3119,7 +3117,7 @@ CUISpinFlt = {}
 function CUISpinFlt:GetText() end
 
 
-	
+
 
 
 ---@class CUISpinNum:CUICustomSpin 
@@ -3130,7 +3128,7 @@ CUISpinNum = {}
 function CUISpinNum:GetText() end
 
 
-	
+
 
 
 ---@class CUISpinText:CUICustomSpin 
@@ -3141,7 +3139,7 @@ CUISpinText = {}
 function CUISpinText:GetText() end
 
 
-	
+
 
 
 ---@class CUIStatic:CUIWindow 
@@ -3171,8 +3169,8 @@ function CUIStatic:SetHeading(number) end
 function CUIStatic:GetHeading() end
 ---@param boolean boolean
 function CUIStatic:SetHeading(boolean) end
-	
-	
+
+
 
 
 ---@class CUITabButton:CUIButton 
@@ -3190,7 +3188,7 @@ function CUITabButton:SetTextureRect(Frect) end
 function CUITabButton:InitTexture(string) end
 ---@param boolean boolean
 function CUITabButton:SetStretchTexture(boolean) end
-	
+
 
 
 ---@class CUITabControl:CUIWindow 
@@ -3214,7 +3212,7 @@ function CUITabControl:AddItem(CUITabButton) end
 ---@param vector2 vector2
 function CUITabControl:AddItem(string, string, vector2, vector2) end
 
-	
+
 
 
 ---@class CUITextWnd:CUIWindow 
@@ -3246,7 +3244,7 @@ function CUITextWnd:AdjustWidthToText() end
 function CUITextWnd:SetEllipsis(boolean) end
 ---@param enum_EVTextAlignment enum_EVTextAlignment
 function CUITextWnd:SetVTextAlignment(enum_EVTextAlignment) end
-	
+
 
 
 ---@class CUITrackBar:CUIWindow 
@@ -3267,7 +3265,7 @@ function CUITrackBar:SetFValue(number) end
 function CUITrackBar:SetIValue(number) end
 ---@param number number
 function CUITrackBar:SetStep(number) end
-	
+
 
 
 ---@class CUIWindow
@@ -3436,7 +3434,7 @@ function CWeaponAK74:getVisible()  end
 function CWeaponAK74:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponAK74:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponAmmo:CGameObject 
@@ -3463,7 +3461,7 @@ function CWeaponAmmo:net_Spawn(cse_abstract) end
 function CWeaponAmmo:use(CGameObject) end
 function CWeaponAmmo:Visual()  end
 function CWeaponAmmo:Weight()  end
-	
+
 
 
 
@@ -3483,7 +3481,7 @@ function CWeaponAutomaticShotgun:getVisible()  end
 function CWeaponAutomaticShotgun:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponAutomaticShotgun:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponBM16:CGameObject 
@@ -3502,7 +3500,7 @@ function CWeaponBM16:getVisible()  end
 function CWeaponBM16:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponBM16:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponBinoculars:CGameObject 
@@ -3521,7 +3519,7 @@ function CWeaponBinoculars:getVisible()  end
 function CWeaponBinoculars:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponBinoculars:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponFN2000:CGameObject 
@@ -3540,7 +3538,7 @@ function CWeaponFN2000:getVisible()  end
 function CWeaponFN2000:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponFN2000:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponFORT:CGameObject 
@@ -3559,7 +3557,7 @@ function CWeaponFORT:getVisible()  end
 function CWeaponFORT:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponFORT:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponGroza:CGameObject 
@@ -3578,7 +3576,7 @@ function CWeaponGroza:getVisible()  end
 function CWeaponGroza:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponGroza:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponHPSA:CGameObject 
@@ -3597,7 +3595,7 @@ function CWeaponHPSA:getVisible()  end
 function CWeaponHPSA:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponHPSA:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponKnife:CGameObject 
@@ -3616,7 +3614,7 @@ function CWeaponKnife:getVisible()  end
 function CWeaponKnife:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponKnife:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponLR300:CGameObject 
@@ -3635,7 +3633,7 @@ function CWeaponLR300:getVisible()  end
 function CWeaponLR300:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponLR300:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponPM:CGameObject 
@@ -3654,7 +3652,7 @@ function CWeaponPM:getVisible()  end
 function CWeaponPM:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponPM:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponRG6:CGameObject 
@@ -3673,7 +3671,7 @@ function CWeaponRG6:getVisible()  end
 function CWeaponRG6:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponRG6:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponRPG7:CGameObject 
@@ -3692,7 +3690,7 @@ function CWeaponRPG7:getVisible()  end
 function CWeaponRPG7:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponRPG7:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponSVD:CGameObject 
@@ -3711,7 +3709,7 @@ function CWeaponSVD:getVisible()  end
 function CWeaponSVD:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponSVD:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponSVU:CGameObject 
@@ -3730,7 +3728,7 @@ function CWeaponSVU:getVisible()  end
 function CWeaponSVU:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponSVU:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponShotgun:CGameObject 
@@ -3749,7 +3747,7 @@ function CWeaponShotgun:getVisible()  end
 function CWeaponShotgun:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponShotgun:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponUSP45:CGameObject 
@@ -3768,7 +3766,7 @@ function CWeaponUSP45:getVisible()  end
 function CWeaponUSP45:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponUSP45:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponVal:CGameObject 
@@ -3787,7 +3785,7 @@ function CWeaponVal:getVisible()  end
 function CWeaponVal:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponVal:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponVintorez:CGameObject 
@@ -3806,7 +3804,7 @@ function CWeaponVintorez:getVisible()  end
 function CWeaponVintorez:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponVintorez:use(CGameObject) end
-	
+
 
 
 ---@class CWeaponWalther:CGameObject 
@@ -3825,7 +3823,7 @@ function CWeaponWalther:getVisible()  end
 function CWeaponWalther:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CWeaponWalther:use(CGameObject) end
-	
+
 
 
 ---@class CZombie:CGameObject 
@@ -3844,7 +3842,7 @@ function CZombie:getVisible()  end
 function CZombie:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function CZombie:use(CGameObject) end
-	
+
 
 
 ---@class CZoneCampfire:CGameObject 
@@ -3866,7 +3864,7 @@ function CZoneCampfire:net_Export(net_packet) end
 function CZoneCampfire:_ruct() end
 ---@param CGameObject CGameObject
 function CZoneCampfire:use(CGameObject) end
-	
+
 
 
 ---@class CZudaArtefact:CArtefact 
@@ -3889,7 +3887,7 @@ function CZudaArtefact:net_Export(net_packet) end
 function CZudaArtefact:GetAfRank()  end
 ---@param CGameObject CGameObject
 function CZudaArtefact:use(CGameObject) end
-	
+
 
 
 ---@class ClientID
@@ -3900,7 +3898,7 @@ function ClientID:value()  end
 ---@param number number
 ---@return ClientID
 function ClientID:set(number) end
-	
+
 
 
 ---@class DLL_Pure
@@ -4331,7 +4329,7 @@ function smart_cover_object:getVisible()  end
 function smart_cover_object:net_Spawn(cse_abstract) end
 ---@param CGameObject CGameObject
 function smart_cover_object:use(CGameObject) end
-	
+
 
 
 ---@class profile_store
@@ -4351,7 +4349,7 @@ function profile_store:get_best_scores() end
 function profile_store:get_awards() end
 function profile_store:stop_loading() end
 function profile_store:load_current_profile(store_operation_cb, store_operation_cb) end
-	
+
 
 
 ---@class CTime
@@ -4366,7 +4364,7 @@ CTime.TimeToHours = 0
 CTime.TimeToMilisecs = 3
 CTime.TimeToMinutes = 1
 CTime.TimeToSeconds = 2
-	
+
 ---@param CTime CTime
 function CTime:sub(CTime) end
 ---@param number number
