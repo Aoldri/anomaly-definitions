@@ -1,5 +1,5 @@
 # Anomaly Definitions
-Definition files for LUA scripting in [S.T.A.L.K.E.R. Anomaly 1.5.2](https://www.moddb.com/mods/stalker-anomaly/downloads/stalker-anomaly-151-to-152), using [sumneko/lua-language-server](https://github.com/sumneko/lua-language-server).
+Definition files for LUA scripting in [S.T.A.L.K.E.R. Anomaly 1.5.2](https://www.moddb.com/mods/stalker-anomaly/downloads/stalker-anomaly-151-to-152), using [LuaLS/lua-language-server](https://github.com/LuaLS/lua-language-server).
 
 This provides annotations for the functions, classes, and namespaces for various scripts (listed below).
 
