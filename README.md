@@ -1,7 +1,7 @@
 # Anomaly Definitions
 Definition files for LUA scripting in [S.T.A.L.K.E.R. Anomaly 1.5.2](https://www.moddb.com/mods/stalker-anomaly/downloads/stalker-anomaly-151-to-152), using [sumneko/lua-language-server](https://github.com/sumneko/lua-language-server).
 
-At the moment, this covers the exported functions, classes, and namespaces from `lua_help.script`. There are plans to include other `.script` files, but they will come with the time, because they need to be hardcoded in a file somewhere.
+This provides annotations for the functions, classes, and namespaces for various scripts (listed below).
 
 This also allows the language server to (hopefully) recognise classes in the form of:
 ```lua
@@ -23,3 +23,12 @@ Add the path to the repo to `Lua › Workspace: Library` in the workspace settin
 Set the `Lua › Runtime: Plugin` as the path to the `plugin.lua` file. For example: `$USERPROFILE/Documents/LuaEnvironments/anomaly-definitions/plugin.lua`
 
 More detailed instructions are found here in the LSP's [wiki](https://github.com/sumneko/lua-language-server/wiki/Libraries).
+
+## Coverage
+
+Exhaustive list:
+- `lua_help.script`
+- `_g.script`
+- `db.script`
+
+Expanding coverage to include other `.script` files will come with time, because they need to be hardcoded in a file somewhere.
