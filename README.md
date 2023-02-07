@@ -8,6 +8,8 @@ This also allows the language server to (hopefully) recognise classes in the for
 class "new_class" (super_class)
 ```
 
+In a hacky way, this also loads variables, functions, and classes from other scripts into their own namespace - replicating how the engine loads the Lua scripts. In essence, this should allow autocomplete and Go To Definition commands to work on variables referenced from library scripts.
+
 ## Usage
 Add the path to the repo to `Lua › Workspace: Library` in the workspace settings of the LSP extension, like so:
 ```java
