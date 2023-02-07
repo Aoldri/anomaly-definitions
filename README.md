@@ -43,6 +43,8 @@ Add the following settings:
 }
 ```
 
+I also recommend adding external scripts to `Lua.workspace.library` for autocomplete, such as `unpacked/gamedata/scripts`, or other utility scripts written by modders.
+
 ## Coverage
 
 Exhaustive list:
