@@ -190,21 +190,66 @@ function reload_ini_sys() end
 -- function ini_file.r_string_to_condlist(ini, s, k, def) end
 -- function ini_file.r_list(ini, s, k, def) end
 -- function ini_file.r_mult(ini, s, k, ...) end
--- function ini_file_ex:__init(fname, advanced_mode) end
--- function ini_file_ex:save() end
--- function ini_file_ex:r_value(s, k, typ, def) end
--- function ini_file_ex:w_value(s, k, val, comment) end
--- function ini_file_ex:collect_section(section) end
--- function ini_file_ex:get_sections(keytable) end
--- function ini_file_ex:remove_line(section, key) end
--- function ini_file_ex:section_exist(section) end
--- function ini_file_ex:line_exist(section, key) end
--- function ini_file_ex:r_string_ex(s, k) end
--- function ini_file_ex:r_bool_ex(s, k, def) end
--- function ini_file_ex:r_float_ex(s, k) end
--- function ini_file_ex:r_string_to_condlist(s, k, def) end
--- function ini_file_ex:r_list(s, k, def) end
--- function ini_file_ex:r_mult(s, k, ...) end
+
+---@class ini_file_ex
+---@overload fun(fname: string, advanced_mode: boolean): ini_file_ex
+ini_file_ex = {}
+
+function ini_file_ex:save() end
+---@param section string
+---@param key string
+---@param type
+---| 0 # String
+---| 1 # Boolean
+---| 2 # Float
+---@param default any
+---@return any
+function ini_file_ex:r_value(section, key, type, default) end
+---@param section string
+---@param key string
+---@param value any
+---@param comment any
+function ini_file_ex:w_value(section, key, value, comment) end
+---@param section string
+---@return table
+function ini_file_ex:collect_section(section) end
+---@param keytable table
+---@return table
+function ini_file_ex:get_sections(keytable) end
+---@param section string
+---@param key string
+function ini_file_ex:remove_line(section, key) end
+---@param section string
+---@return boolean
+function ini_file_ex:section_exist(section) end
+---@param section string
+---@param key string
+---@return boolean
+function ini_file_ex:line_exist(section, key) end
+---@param section string
+---@param key string
+---@return string|nil
+function ini_file_ex:r_string_ex(section, key) end
+---@param section string
+---@param key string
+---@param default boolean
+---@return boolean
+function ini_file_ex:r_bool_ex(section, key, default) end
+---@param section string
+---@param key string
+---@return number|nil
+function ini_file_ex:r_float_ex(section, key) end
+---@param section string
+---@param key string
+---@param default string
+---@return table
+function ini_file_ex:r_string_to_condlist(section, key, default) end
+---@param section string
+---@param key string
+---@param default string
+---@return table
+function ini_file_ex:r_list(section, key, default) end
+function ini_file_ex:r_mult(section, key, ...) end
 
 ---Get parameter from section in system_ini
 ---@param typ
