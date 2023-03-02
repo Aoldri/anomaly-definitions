@@ -55,7 +55,7 @@ function db.add_smart_terrain(obj) end
 function db.del_smart_terrain(obj) end
 
 function db.add_anim_obj(anim_obj, binder) end
-function del_anim_obj(anim_obj) end
+function db.del_anim_obj(anim_obj) end
 
 function db.add_stalker(npc) end
 function db.del_stalker(npc) end
