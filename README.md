@@ -51,5 +51,6 @@ Exhaustive list:
 - `lua_help.script`
 - `_g.script`
 - `db.script`
+- `ui_mcm.script`
 
 Expanding coverage to include other `.script` files will come with time, because they need to be hardcoded in a file somewhere.
