@@ -1563,7 +1563,7 @@ function game_object:set_force_anti_aim(boolean) end
 ---@param number number
 function game_object:force_stand_sleep_animation(number) end
 function game_object:add_combat_sound(string, number, enum_ESoundTypes, number, number, number, string) end
-function game_object:command( entity_action, boolean) end
+function game_object:command(entity_action, boolean) end
 ---@param hit hit
 function game_object:hit(hit) end
 ---@param boolean boolean
@@ -1746,7 +1746,7 @@ function game_object:bone_direction(bone_name, bHud) end
 ---@field power any
 ---@field type any
 ---@overload fun(): hit
----@overload fun( hit): hit
+---@overload fun(hit): hit
 hit = {}
 
 hit.burn = 0
@@ -1767,24 +1767,57 @@ function hit:bone(string) end
 
 
 ---@class ini_file
----@overload fun(string): ini_file
+---@overload fun(fname: string): ini_file
 ini_file = {}
 
----@param string string
-function ini_file:line_count(string) end
-function ini_file:r_bool(string, string) end
----@param string string
-function ini_file:section_exist(string) end
-function ini_file:r_float(string, string) end
-function ini_file:r_clsid(string, string) end
-function ini_file:r_s32(string, string) end
+---@param section string
+---@return number
+function ini_file:line_count(section) end
+---@param section string
+---@param key string
+---@return boolean
+function ini_file:r_bool(section, key) end
+---@param section string
+---@return boolean
+function ini_file:section_exist(section) end
+---@param section string
+---@param key string
+---@return number
+function ini_file:r_float(section, key) end
+---@param section string
+---@param key string
+---@return clsid
+function ini_file:r_clsid(section, key) end
+---@param section string
+---@param key string
+---@return number
+function ini_file:r_s32(section, key) end
 function ini_file:r_line(ini_file, string, number, string, string) end
-function ini_file:r_token(string, string,  token_list) end
-function ini_file:r_vector(string, string) end
-function ini_file:r_u32(string, string) end
-function ini_file:r_string_wq(string, string) end
-function ini_file:r_string(string, string) end
-function ini_file:line_exist(string, string) end
+---@param section string
+---@param key string
+---@param token_list token_list
+---@return number
+function ini_file:r_token(section, key, token_list) end
+---@param section string
+---@param key string
+---@return vector
+function ini_file:r_vector(section, key) end
+---@param section string
+---@param key string
+---@return number
+function ini_file:r_u32(section, key) end
+---@param section string
+---@param key string
+---@return string
+function ini_file:r_string_wq(section, key) end
+---@param section string
+---@param key string
+---@return string
+function ini_file:r_string(section, key) end
+---@param section string
+---@param key string
+---@return boolean
+function ini_file:line_exist(section, key) end
 ---@param functor fun(section: string): boolean? -- return true to exit iteration early
 function ini_file:section_for_each(functor) end
 
