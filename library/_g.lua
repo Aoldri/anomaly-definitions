@@ -136,7 +136,9 @@ function distance_2d_sqr(a, b) end
 function string.gsplit(s, sep, plain) end
 function trim(s) end
 function strformat(text, ...) end
+---@return string[]
 function str_explode(str, sep, plain) end
+---@return string[] | table<string, boolean>
 function parse_list(ini, key, val, convert) end
 function parse_names(s) end
 function parse_key_value(s) end
@@ -241,12 +243,12 @@ function ini_file_ex:r_bool_ex(section, key, default) end
 function ini_file_ex:r_float_ex(section, key) end
 ---@param section string
 ---@param key string
----@param default string
+---@param default? string
 ---@return table
 function ini_file_ex:r_string_to_condlist(section, key, default) end
 ---@param section string
 ---@param key string
----@param default string
+---@param default? string
 ---@return table
 function ini_file_ex:r_list(section, key, default) end
 function ini_file_ex:r_mult(section, key, ...) end

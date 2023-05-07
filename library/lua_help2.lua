@@ -1807,7 +1807,12 @@ function ini_file:r_clsid(section, key) end
 ---@param key string
 ---@return number
 function ini_file:r_s32(section, key) end
-function ini_file:r_line(ini_file, string, number, string, string) end
+---@param string section
+---@param number line_number
+---@param string internal_string_n
+---@param string internal_string_v
+---@return boolean, string, string
+function ini_file:r_line(string, number, string, string) end
 ---@param section string
 ---@param key string
 ---@param token_list token_list
@@ -3404,6 +3409,7 @@ function GameGraph__CVertex:level_vertex_id()  end
 function GameGraph__CVertex:game_point( GameGraph__CVertex) end
 function GameGraph__CVertex:level_id()  end
 ---@param GameGraph__CVertex GameGraph__CVertex
+---@return vector
 function GameGraph__CVertex:level_point( GameGraph__CVertex) end
 
 

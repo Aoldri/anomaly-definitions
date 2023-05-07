@@ -13,6 +13,7 @@ function device() end
 ---@param action_base action_base
 function cast_planner(action_base) end
 function IsGameTypeSingle() end
+---@return CGameGraph
 function game_graph() end
 ---@param number number
 ---@return key_bindings
@@ -39,6 +40,7 @@ function create_ini_file(string) end
 function get_hud() end
 ---@param string string
 function error_log(string) end
+---@return string
 function command_line() end
 function getFS() end
 ---@param string string
@@ -284,13 +286,13 @@ function level.send(net_packet, bReliable, bSequential, bHighPriority, bSendImme
 -- REZY: returns movement state of actor 
 function level.actor_moving_state()end
 -- REZY: init a key press event 
----@param cmd cmd
+---@param cmd DIK_keys
 function level.press_action(cmd)   end
 -- REZY: init a key press event  
----@param cmd cmd
+---@param cmd DIK_keys
 function level.release_action(cmd) end
 -- REZY: init a key press event 
----@param cmd cmd
+---@param cmd DIK_keys
 function level.hold_action(cmd)    end
 -- returns a float, HUD sensor value 
 function level.get_env_rads()end
@@ -452,15 +454,6 @@ function hud_adjust.set_value(string, number) end
 function hud_adjust.set_vector(number, number, number, number, number) end
 ---@param string string
 function hud_adjust.remove_hud_model(string) end
-
-debug = {}
----@param string string
----@param number number
-function debug.traceback(string, number) end
----@param number number
----@param string string
-function debug.getinfo(number, string) end
-
 
 
 ---@class entity_memory_object:memory_object 
@@ -2830,6 +2823,7 @@ CGameGraph = {}
 ---@param number number
 function CGameGraph:valid_vertex_id(number)  end
 ---@param number number
+---@return GameGraph__CVertex
 function CGameGraph:vertex(number)  end
 function CGameGraph:accessible( CGameGraph,  number) end
 function CGameGraph:accessible( CGameGraph,  number, boolean) end
@@ -3571,11 +3565,13 @@ function CRadioactiveZone:use(CGameObject) end
 ---@field time_delta any
 ---@field width any
 render_device = {}
----@param render_device render_device
-function render_device:time_global( render_device) end
----@param render_device render_device
-function render_device:is_paused(render_device) end
-function render_device:pause(render_device, boolean) end
+---@return number
+function render_device:time_global() end
+---@return number
+function render_device:time_continual() end
+---@return boolean
+function render_device:is_paused() end
+function render_device:pause(boolean) end
 
 
 
@@ -4079,8 +4075,7 @@ function cse_alife_dynamic_object:section_name() end
 function cse_alife_dynamic_object:on_spawn() end
 function cse_alife_dynamic_object:STATE_Read(net_packet, number) end
 function cse_alife_dynamic_object:interactive()  end
----@param cse_abstract cse_abstract
-function cse_alife_dynamic_object:name( cse_abstract) end
+function cse_alife_dynamic_object:name() end
 function cse_alife_dynamic_object:can_switch_offline()  end
 ---@param boolean boolean
 function cse_alife_dynamic_object:can_switch_offline(boolean) end
