@@ -7,6 +7,7 @@ function game_ini() end
 ---@param number number
 ---@param number number
 function bit_and(number, number) end
+---@return render_device
 function device() end
 
 ---@param action_base action_base
@@ -34,6 +35,7 @@ function buy_condition(ini_file, string) end
 function buy_condition(number, number) end
 ---@param string string
 function create_ini_file(string) end
+---@return CUIGameCustom
 function get_hud() end
 ---@param string string
 function error_log(string) end
@@ -53,6 +55,7 @@ function IsImportantSave() end
 function system_ini() end
 -- Alundaio: Reloads system_ini. Can be done in-game
 function reload_system_ini() end
+---@return alife_simulator
 function alife() end
 function flush() end
 function editor() end
@@ -91,6 +94,15 @@ function GetFontGraffiti19Russian() end
 function GetFontGraffiti22Russian() end
 function GetFontGraffiti32Russian() end
 function GetFontGraffiti50Russian() end
+---@return vector2
+function GetCursorPosition() end
+---@param pos vector2
+function SetCursorPosition(pos) end
+---@param window CUIWindow
+---@param vis_rect Frect
+---@param border number
+---@param dx16pos number
+function FitInRect(window, vis_rect, border, dx16pos) end
 
 --------------------------
 -- Level Namespace
@@ -338,7 +350,10 @@ function game.prefetch_texture(string)end
 function game.prefetch_model(string)end
 function game.actor_lower_weapon() end
 function game.actor_weapon_lowered() end
-function game.world2ui() end
+---@param pos vector
+---@param hud? boolean
+---@return vector2
+function game.world2ui(pos, hud) end
 -- return a string includes all possible resolutions
 function game.get_resolutions()end
 -- (hand, item name, animation name, ?, speed)
@@ -670,6 +685,7 @@ function vector:div( vector,  vector) end
 function vector:div( vector, number) end
 ---@param vector vector
 function vector:dotproduct( vector)  end
+---@return number
 function vector:getH()  end
 ---@param vector vector
 function vector:min( vector) end
@@ -1984,42 +2000,43 @@ function CALifeMonsterPatrolPathManager:actual()  end
 
 ---@class alife_simulator
 alife_simulator = {}
-function alife_simulator:level_name( alife_simulator, number) end
-function alife_simulator:create_ammo(alife_simulator, string,  vector, number, number, number, number) end
-function alife_simulator:add_out_restriction(alife_simulator, cse_alife_monster_abstract, number) end
+function alife_simulator:level_name(number) end
+function alife_simulator:create_ammo(string,  vector, number, number, number, number) end
+function alife_simulator:add_out_restriction(cse_alife_monster_abstract, number) end
 function alife_simulator:set_interactive(number, boolean) end
-function alife_simulator:add_in_restriction(alife_simulator, cse_alife_monster_abstract, number) end
-function alife_simulator:remove_in_restriction(alife_simulator, cse_alife_monster_abstract, number) end
----@param alife_simulator alife_simulator
-function alife_simulator:level_id(alife_simulator) end
-function alife_simulator:valid_object_id( alife_simulator, number) end
-function alife_simulator:remove_out_restriction(alife_simulator, cse_alife_monster_abstract, number) end
+function alife_simulator:add_in_restriction(cse_alife_monster_abstract, number) end
+function alife_simulator:remove_in_restriction(cse_alife_monster_abstract, number) end
+function alife_simulator:level_id() end
+function alife_simulator:valid_object_id(number) end
+function alife_simulator:remove_out_restriction(cse_alife_monster_abstract, number) end
 function alife_simulator:switch_distance()  end
 ---@param number number
 function alife_simulator:switch_distance(number) end
 function alife_simulator:kill_entity(cse_alife_monster_abstract,  number, cse_alife_schedulable) end
-function alife_simulator:kill_entity(alife_simulator, cse_alife_monster_abstract,  number) end
-function alife_simulator:kill_entity(alife_simulator, cse_alife_monster_abstract) end
+function alife_simulator:kill_entity(cse_alife_monster_abstract,  number) end
+function alife_simulator:kill_entity(cse_alife_monster_abstract) end
 function alife_simulator:set_switch_online(number, boolean) end
 function alife_simulator:set_switch_offline(number, boolean) end
-function alife_simulator:has_info( alife_simulator,  number, string) end
-function alife_simulator:dont_has_info( alife_simulator,  number, string) end
-function alife_simulator:disable_info( alife_simulator,  number, string) end
-function alife_simulator:give_info( alife_simulator,  number, string) end
+function alife_simulator:has_info(number, string) end
+function alife_simulator:dont_has_info(number, string) end
+function alife_simulator:disable_info(number, string) end
+function alife_simulator:give_info(number, string) end
 function alife_simulator:remove_all_restrictions(number,  enum_RestrictionSpace__ERestrictorTypes) end
-function alife_simulator:object( alife_simulator, number) end
-function alife_simulator:object( alife_simulator, number, boolean) end
----@param alife_simulator alife_simulator
-function alife_simulator:actor( alife_simulator) end
-function alife_simulator:story_object( alife_simulator, number) end
-function alife_simulator:spawn_id(alife_simulator, number) end
-function alife_simulator:release(alife_simulator, cse_abstract, boolean) end
-function alife_simulator:create(alife_simulator, number) end
-function alife_simulator:create(alife_simulator, string,  vector, number, number, number) end
-function alife_simulator:create(alife_simulator, string,  vector, number, number) end
+---@return cse_alife_dynamic_object
+function alife_simulator:object(number) end
+---@return cse_alife_dynamic_object
+function alife_simulator:object(number, boolean) end
+---@return cse_alife_creature_actor
+function alife_simulator:actor() end
+function alife_simulator:story_object(number) end
+function alife_simulator:spawn_id(number) end
+function alife_simulator:release(cse_abstract, boolean) end
+function alife_simulator:create(number) end
+function alife_simulator:create(string,  vector, number, number, number) end
+function alife_simulator:create(string,  vector, number, number) end
 -- Alundaio: (id,game_vertex_id,level_vertex_id,position)
 function alife_simulator:teleport_object(number,number,number,vector) end
-function alife_simulator:get_children( alife_simulator, cse_abstract) end
+function alife_simulator:get_children(cse_abstract) end
 
 
 ---@class CALifeSmartTerrainTask
@@ -3542,8 +3559,8 @@ function CRadioactiveZone:use(CGameObject) end
 
 ---@class render_device
 ---@field aspect_ratio any
----@field cam_dir any
----@field cam_pos any
+---@field cam_dir vector Unit vector pointing in the same direction as the camera
+---@field cam_pos vector Position of the camera
 ---@field cam_right any
 ---@field cam_top any
 ---@field f_time_delta any

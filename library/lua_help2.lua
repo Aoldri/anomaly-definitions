@@ -838,7 +838,7 @@ function anim:anim(string) end
 
 
 ---@class object_binder
----@field object any
+---@field object game_object
 ---@overload fun(game_object): object_binder
 object_binder = {}
 
@@ -949,6 +949,7 @@ function game_object:id()  end
 function game_object:position()  end
 function game_object:level_vertex_id()  end
 function game_object:game_vertex_id()  end
+---@return string
 function game_object:section()  end
 function game_object:name()  end
 function game_object:clsid()  end
@@ -1206,6 +1207,7 @@ function game_object:in_current_loophole_fov(vector)  end
 function game_object:clear_animations() end
 ---@param boolean boolean
 function game_object:set_smart_cover_target_default(boolean) end
+---@return CPhysicObject
 function game_object:get_physics_object() end
 ---@param number number
 function game_object:idle_max_time(number) end
@@ -1296,6 +1298,7 @@ function game_object:set_dest_level_vertex_id(number) end
 function game_object:deadbody_closed(boolean) end
 function game_object:register_door_for_npc() end
 function game_object:get_script_name()  end
+---@return ini_file
 function game_object:spawn_ini()  end
 function game_object:get_campfire() end
 function game_object:get_movement_speed()  end
@@ -1348,8 +1351,10 @@ function game_object:extrapolate_length(number) end
 ---@param boolean boolean
 function game_object:death_sound_enabled(boolean) end
 function game_object:death_sound_enabled()  end
----@param string string
+---@param string string Name of the animation to be played
 function game_object:play_cycle(string) end
+---@param string string Name of the animation to be played
+---@param boolean boolean mixin
 function game_object:play_cycle(string, boolean) end
 function game_object:set_capture_anim(game_object, string,  vector, number) end
 function game_object:patrol() end
@@ -1738,6 +1743,16 @@ function game_object:bone_name(index, bHud) end
 ---@return vector
 function game_object:bone_direction(bone_name, bHud) end
 
+---@param bone_name? string defaults to root bone if nil
+---@param bHud? boolean set `true` if `game_object` is a hud item - defaults to false
+---@return boolean
+function game_object:bone_visible(bone_name, bHud) end
+
+---@param bone_name string
+---@param bVisibility boolean
+---@param bRecursive boolean
+---@param bHud boolean
+function game_object:set_bone_visible(bone_name, bVisibility, bRecursive, bHud) end
 
 ---@class hit
 ---@field direction any
@@ -2262,6 +2277,47 @@ function CScriptXmlInit:InitAnimStatic(string, CUIWindow) end
 ---@return CUIFrameWindow
 function CScriptXmlInit:InitFrame(string, CUIWindow) end
 
+---@param path string
+---@param index number
+---@return boolean
+function CScriptXmlInit:NodeExist(path, index) end
+
+---@param path string
+---@param index number
+---@param tag_name string
+---@return int
+function CScriptXmlInit:GetNodesNum(path, index, tag_name) end
+
+---@param path string
+---@param index number
+---@return boolean
+function CScriptXmlInit:NavigateToNode(path, index) end
+
+---@param tag_name string
+---@param attrib_name string
+---@param attrib_value string
+function CScriptXmlInit:NavigateToNode_ByAttribute(tag_name, attrib_name, attrib_value) end
+
+---@param tag_name string
+---@param index number
+---@param tag_name string
+---@param attrib string
+---@param attrib_value_pattern string
+---@return boolean
+function CScriptXmlInit:NavigateToNode_ByPath(path, index, tag_name, attrib, attrib_value_pattern) end
+
+function CScriptXmlInit:NavigateToRoot() end
+
+---@param path string
+---@param index number
+---@return string
+function CScriptXmlInit:ReadValue(path, index) end
+
+---@param path string
+---@param index number
+---@param attrib string
+---@return string
+function CScriptXmlInit:ReadAttribute(path, index, attrib) end
 
 
 ---@class ce_script_zone:DLL_Pure 
@@ -3199,9 +3255,6 @@ function CUIStatic:EnableHeading(boolean) end
 function CUIStatic:GetHeading() end
 ---@param number number
 function CUIStatic:SetHeading(number) end
-function CUIStatic:GetHeading() end
----@param boolean boolean
-function CUIStatic:SetHeading(boolean) end
 
 
 
@@ -4266,6 +4319,7 @@ physics_shell = {}
 function physics_shell:get_joints_number() end
 function physics_shell:is_breaking_blocked() end
 ---@param number number
+---@return physics_element
 function physics_shell:get_element_by_bone_id(number) end
 function physics_shell:get_linear_vel(vector)  end
 function physics_shell:is_breakable() end
@@ -4274,8 +4328,10 @@ function physics_shell:unblock_breaking() end
 ---@param string string
 function physics_shell:get_joint_by_bone_name(string) end
 ---@param number number
+---@return physics_element
 function physics_shell:get_element_by_order(number) end
 ---@param string string
+---@return physics_element
 function physics_shell:get_element_by_bone_name(string) end
 function physics_shell:apply_force(number, number, number) end
 function physics_shell:get_angular_vel(vector)  end

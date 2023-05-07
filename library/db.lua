@@ -9,6 +9,7 @@ db.zone_by_name = {}
 db.bridge_by_name = {}
 db.script_ids = {}
 db.storage = {}
+---@type game_object
 db.actor = nil
 db.actor_proxy = db.actor_proxy.actor_proxy()
 db.heli = {}
