@@ -31,6 +31,9 @@ Add the following settings:
 // <workspace>.code-workspace
 // settings.json
 {
+  "files.associations": {
+      "*.script": "lua"
+  },
   "Lua.workspace.library": [
       "<repo>/library"
   ],
