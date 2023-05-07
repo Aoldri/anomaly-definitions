@@ -61,7 +61,7 @@ function OnSetText(uri, text)
             end
 
             -- Reformat Classes
-            for start, new_class, super_class, finish in line_text:gmatch '()class "([%w_]+)"[ ]?%(?([%w_%.]*)%)?()' do
+            for start, new_class, super_class, finish in line_text:gmatch '()class "([%w_]+)"%s?%(?(%s*[%w_%.]*%s*)%)?()' do
                 if super_class ~= "" then super_class = ":"..super_class end
                 local exported_class = file_name .. "." .. new_class
 
