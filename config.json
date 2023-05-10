@@ -6,7 +6,6 @@
 		"Lua.workspace.ignoreDir": [ 
 			"lua_help.script"
 		],
-	    "Lua.workspace.checkThirdParty": true,
 		"Lua.workspace.ignoreSubmodules": false,
 		"Lua.diagnostics.disable": [
 			"lowercase-global",
@@ -16,8 +15,7 @@
 			"duplicate-doc-alias",
 			"duplicate-doc-field"
 		  ],
-		"Lua.runtime.version": "Lua 5.1",
-		"Lua.runtime.plugin": "./anomaly-definitions/plugin.lua"
+		"Lua.runtime.version": "Lua 5.1"
     },
     "files": [
         ".*%.script"
