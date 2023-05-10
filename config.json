@@ -1,11 +1,24 @@
 {
     "settings": {
-            "Lua.diagnostics.disable" : [
-                "lowercase-global"
-            ],
-            "Lua.runtime.version": "Lua 5.1",
-            "Lua.workspace.ignoreSubmodules": false
-        },
+		"files.associations": {
+			"*.script": "lua"
+		},
+		"Lua.workspace.ignoreDir": [ 
+			"lua_help.script"
+		],
+	    "Lua.workspace.checkThirdParty": true,
+		"Lua.workspace.ignoreSubmodules": false,
+		"Lua.diagnostics.disable": [
+			"lowercase-global",
+			"trailing-space",
+			"undefined-global",
+			"duplicate-doc-param",
+			"duplicate-doc-alias",
+			"duplicate-doc-field"
+		  ],
+		"Lua.runtime.version": "Lua 5.1",
+		"Lua.runtime.plugin": "./anomaly-definitions/plugin.lua"
+    },
     "files": [
         ".*%.script"
     ],
