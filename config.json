@@ -1,7 +1,7 @@
 {
 	"settings": {
 		"files.associations": {
-		"*.script": "lua"
+			"*.script": "lua"
 		},
 		"Lua.workspace.ignoreDir": [ 
 			"lua_help.script"
