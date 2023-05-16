@@ -1704,27 +1704,49 @@ function game_object:torch_enabled()  end
 
 -- Class casting. obj:cast_CustomOutfit() allows you to access CCustomOutfit class methods if the object is an outfit
 	-- All classes and their methods are listed in this file
+---@return CActor
 function game_object:cast_Actor() end
+---@return CCar
 function game_object:cast_Car() end
+---@return CHelicopter
 function game_object:cast_Heli() end
+---@return CInventoryOwner
 function game_object:cast_InventoryOwner() end
+---@return CInventoryBox
 function game_object:cast_InventoryBox() end
+---@return CCustomZone
 function game_object:cast_CustomZone() end
+---@return CTorridZone
 function game_object:cast_TorridZone() end
+---@return CMosquitoBald
 function game_object:cast_MosquitoBald() end
+---@return CZoneCampfire
 function game_object:cast_ZoneCampfire() end
+---@return CInventoryItem
 function game_object:cast_InventoryItem() end
+---@return CCustomOutfit
 function game_object:cast_CustomOutfit() end
+---@return CHelmet
 function game_object:cast_Helmet() end
+---@return CArtefact
 function game_object:cast_Artefact() end
+---@return CWeaponAmmo
 function game_object:cast_Ammo() end
+---@return CWeapon
 function game_object:cast_Weapon() end
+---@return CWeaponMagazined
 function game_object:cast_WeaponMagazined() end
+---@return CWeaponMagazinedWGrenade
 function game_object:cast_WeaponMagazinedWGrenade() end
+---@return CEatableItem
 function game_object:cast_EatableItem() end
+---@return CMedkit
 function game_object:cast_Medkit() end
+---@return CAntirad
 function game_object:cast_Antirad() end
+---@return CFoodItem
 function game_object:cast_FoodItem() end
+---@return CBottleItem
 function game_object:cast_BottleItem() end
 
 ---Returns name of a bone by index in the `game_object`.
