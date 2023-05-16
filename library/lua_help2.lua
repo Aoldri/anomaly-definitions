@@ -3531,6 +3531,31 @@ function CWeapon:GetInertionAimFactor()  end
 function CWeapon:Cost()  end
 function CWeapon:Weight()  end
 
+---@class CWeaponMagazined:CWeapon 
+---@overload fun(): CWeaponMagazined
+CWeaponMagazined = {}
+---@param mode number
+function CWeaponMagazined:SetFireMode(mode) end
+
+---@class CWeaponMagazinedWGrenade:CWeaponMagazined 
+---@overload fun(): CWeaponMagazinedWGrenade
+CWeaponMagazinedWGrenade = {}
+---@return boolean
+function CWeaponMagazinedWGrenade:GetGrenadeLauncherMode() end
+---@param mode number
+function CWeaponMagazinedWGrenade:SetGrenadeLauncherMode(mode) end
+---@param ammo_count number
+function CWeaponMagazinedWGrenade:SetAmmoElapsed2(ammo_count) end
+---@return number
+function CWeaponMagazinedWGrenade:GetAmmoElapsed2() end
+---@return number
+function CWeaponMagazinedWGrenade:GetAmmoMagSize2() end
+---@param type number
+function CWeaponMagazinedWGrenade:SetAmmoType2(type) end
+---@return number
+function CWeaponMagazinedWGrenade:GetAmmoType2() end
+---@param functor function
+function CWeaponMagazinedWGrenade:AmmoTypeForEach2(functor) end
 
 ---@class CWeaponAK74:CGameObject 
 ---@overload fun(): CWeaponAK74
