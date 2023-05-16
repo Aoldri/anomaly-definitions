@@ -3503,6 +3503,11 @@ function CWeapon:GetAmmoType() end
 function CWeapon:AmmoTypeForEach(functor) end
 function CWeapon:RPM()  end
 function CWeapon:ModeRPM()  end
+---@return
+---| 0 # Normal
+---| 1 # Alt Aim mode
+---| 2 # Grenade Launcher mode
+function CWeapon:GetZoomType() end
 function CWeapon:Get_PDM_Base()  end
 function CWeapon:Get_Silencer_PDM_Base()  end
 function CWeapon:Get_Scope_PDM_Base()  end
@@ -3527,9 +3532,14 @@ function CWeapon:GetHitPower() end
 function CWeapon:GetHitPowerCritical() end
 function CWeapon:GetHitImpulse() end
 function CWeapon:GetFireDistance() end
+function CWeapon:GetFireMode() end
 function CWeapon:GetInertionAimFactor()  end
 function CWeapon:Cost()  end
 function CWeapon:Weight()  end
+function CWeapon:IsMisfire() end
+function CWeapon:SetMisfire() end
+function CWeapon:IsPending() end
+function CWeapon:SetPending() end
 
 ---@class CWeaponMagazined:CWeapon 
 ---@overload fun(): CWeaponMagazined
